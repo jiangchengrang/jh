@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<style>
+			body{
+				background: gainsboro;
+			}
+			.div1{
+				height: 130px;
+				background: lightseagreen;
+				text-align: center;
+				line-height: 130px;
+				font-family: "宋体";
+				color: white;
+			}
+			.div1:hover{
+				letter-spacing: 2px;
+			}
+			.span1{
+				font-size: 30px;
+			}
+			.div1:hover .span1{
+				opacity: 0.5;
+			}
+			.div2{
+				height: 80px;
+				background: darkslategray;
+				display: flex;
+			}
+			.dv21{
+				height: 80px;
+				width: 120px;
+				background: lightseagreen;
+				text-align: center;
+				line-height: 80px;
+				color: white;
+				margin-left: 17%;
+				font-size: 25px;
+				font-family: "宋体";
+				opacity: 0.9;
+			}
+			.dv22{
+				height: 80px;
+				width: 120px;
+			   background: darkslategray;
+				text-align: center;
+				line-height: 80px;
+				color: white;
+				font-size: 25px;
+				font-family: "宋体";
+				margin-left: 2px;
+				
+			}
+		.dv22:hover{
+			background: lightseagreen;
+			opacity: 0.9;
+		}
+			
+		
+			.dv23{
+				height: 80px;
+				width: 120px;
+				background: lightseagreen;
+				text-align: center;
+				line-height: 80px;
+				color: white;
+				font-size: 25px;
+				font-family: "宋体";
+				margin-left: 2px;
+				opacity: 0.9;
+			}
+			.dv24{
+				height: 80px;
+				width: 120px;
+				background: darkseagreen;
+				text-align: center;
+				line-height: 80px;
+				color: white;
+				font-size: 25px;
+				font-family: "宋体";
+				margin-left: 700px;
+			}
+			.div3{
+				width: 17%;
+				height: 1000px;
+				float: left;
+			}
+			.div4{
+				width: 66%;
+				height: 1000px;
+				float: left;
+			}
+			.div5{
+				width: 17%;
+				height: 1000px;
+				float: left;
+			}
+			.dv41{
+				height: 50px;
+				background: white;
+				margin-bottom: 10px;
+			}
+			.dvleft{
+				width: 300px;
+				height: 50px;
+			    text-align: center;
+				line-height: 50px;
+				float: left;
+				color: lightseagreen;
+			}
+			.dvright{
+				width: 100px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				float: right;
+				color: lightseagreen;
+			}
+			.dv45{
+				width:1165px ;
+				height: 1300px
+				float: left;
+			}
+			.dv42{
+				width: 200px;
+				height: 370px;
+				float: left;
+				margin-left:5px;
+				margin-bottom: 10px;
+			}
+			.dv43{
+				width: 920px;
+				height: 370px;
+				float: left;
+				background: green;
+				margin-left: 20px;
+				margin-right: 20px;
+				margin-bottom: 10px;
+				display: flex;
+				overflow: hidden;
+			}
+			.img1{
+				animation: img1 6s linear infinite;
+			}
+			@keyframes img1{
+				from{transform: translateX(0);}
+				to{transform: translateX(-1900px);}
+			}
+			.dv44{
+				width:489px;
+				height: 1070px;
+				float: left;
+				position: absolute;
+				left: 1600px;
+				top: 280px;
+			}
+			.dv441{
+				height: 50px;
+				padding: 10px;
+				background: white;
+				display: flex;
+				justify-content:space-between;
+			}
+			.d1{
+				width: 60px;
+				height: 60px;
+				margin-left: 10px;
+			}
+			.dv442{
+				margin-top: 10px;
+				height: 135px;
+				background: white;
+				padding: 20px;
+			}
+			.d2{
+				height: 40px;
+				width: 80%;
+				background: gainsboro;
+				float: left;
+				line-height:40px;
+				margin-top: 15px;
+			}
+			.d3{
+				margin-top:15px;
+				width: 20%;
+				height: 40px;
+				background: lightseagreen;
+				color: white;
+				text-align: center;
+				line-height:40px;
+				float: left;
+			}
+			.dv443{
+				margin-top: 10px;
+				height: 145px;
+				background: white;
+				padding: 20px;
+				color: lightseagreen;
+			}
+			.dv444{
+				margin-top: 10px;
+				height: 285px;
+				background: white;
+				padding: 20px;
+				color: lightseagreen;
+			}
+			.dv445{
+				margin-top: 10px;
+				height: 330px;
+				background: white;
+				padding: 20px;
+				color: lightseagreen;
+			}
+			table{
+				width: 100%;
+				font-size: 20px;
+			}
+			.dv46{
+				height: 175px;
+				width: 1096px;
+				background: white;
+				clear: both;
+				margin-top: 10px;
+				padding: 25px;
+			}
+			.dv461{
+				width: 130px;
+				height: 30px;
+				background: indianred;
+				text-align: center;
+				line-height: 30px;
+				color: white;
+				float: left;
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+			.dv462{
+				width: 650px;
+				height: 30px;
+				margin-left: 10px;
+				line-height: 30px;
+				color: lightseagreen;
+				float: left;
+				font-size: 25px;
+				margin-bottom: 20px;
+			}
+			.dv463{
+				clear: both;
+				font-size: 20px;
+				word-break: break-all;
+			}
+			.dv464{
+				float:left ;
+				margin-right: 30px;
+			}
+			.di1,.di2,.di3,.di4,.di5,.di6,.di7,.di8,.di9,.di10{
+				width: 48%;
+				height: 40px;
+				background: lightseagreen;
+				color: white;
+				float: left;
+				line-height: 40px;
+				margin-bottom: 5px;
+				text-indent: 0.3em;
+			}
+			.di2,.di4,.di6,.di8,.di10{
+				margin-left: 15px;
+			}
+			.di2{
+				background: darkseagreen;
+			}
+			.di3{
+				background: indianred;
+			}
+			.di4{
+				background: #4682B4;
+			}
+			.di5{
+				background: palevioletred;
+			}
+			.di7{
+				background: darkgoldenrod;
+			}
+			.di8{
+				background: orange;
+			}
+			.di9{
+				background: darkolivegreen;
+			}
+			.dv47{
+				height: 40px;
+				width: 1096px;
+				background: white;
+				clear: both;
+				margin-top: 10px;
+				padding: 25px;
+			}
+			.dv471{
+				width: 40px;
+				height: 40px;
+				background: lightseagreen;
+				margin-left: 400px;
+				color: white;
+                text-align: center;	
+                line-height: 40px;	
+                font-size: 20px;
+                float: left;
+                	}
+              .dv472{
+				width: 40px;
+				height: 40px;
+				background: gainsboro;
+				margin-left: 300px;
+				color: white;
+                text-align: center;	
+                line-height: 40px;	
+                font-size: 20px;
+                margin-left: 5px;
+                  float: left;
+                	}
+              .dv473{
+				width: 80px;
+				height: 40px;
+				background: gainsboro;
+				margin-left: 300px;
+				color: black;
+                text-align: center;	
+                line-height: 40px;	
+                font-size: 20px;
+                margin-left: 5px;
+                  float: left;
+                	}
+               .imgleft{
+              	opacity: 0.8;
+              }
+              .imgleft:hover{
+                		opacity: 1.0;
+                	}
+             
+             .imggd{
+				width: 60px;
+				height: 60px;
+				position:fixed;
+				top: 1130px;
+				left: 2390px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<font size="50px">飞舟博客</font><span class="span1">--关注web前端发展，分享办公软件使用心得</span>
+		</div>
+		<div class="div2">
+			<div class="dv21"  id="web1">首页</div>
+			<div class="dv22">资讯</div>
+			<div class="dv22">web前端</div>
+			<div class="dv22">office</div>
+			<div class="dv22">计算机</div>
+			<div class="dv22">资源</div>
+			<div class="dv23">其他</div>
+			<div class="dv24">
+				<i class="fa fa-search fa"></i>
+			</div>
+		</div>
+		<div class="div3"></div>
+		<div class="div4">
+			   <div class="dv41">
+			        <div class="dvleft">
+				    <i  class="fa fa-volume-up fa"></i><font color="black">&nbsp;&nbsp;飞舟博客改版，新增web前端开发知识</font>
+			        </div>	
+			        <div class="dvright">
+			  	    <i  class="fa fa-user-circle-o fa"></i>&nbsp;&nbsp;登录
+			        </div>	
+			   </div>
+			   
+	<div class="dv45">
+			   <div class="dv42">
+			   	    <a  href="#" title="PowerPoint里面无法进行中文输入，原因为何?" > <img class="imgleft" src="飞舟博客/images/blog/banner/timthumb.jpg"width="200px" height="90px" /></a>
+			    	<a  href="#" title="如何把嵌在PPT里的视频内容导出？" > <img class="imgleft" src="飞舟博客/images/blog/banner/banner2.jpg" width="200px" height="90px"/></a>
+			   	    <a  href="#" title="网页音视频下载方法--网页缓存 " > <img class="imgleft"src="飞舟博客/images/blog/banner/banner3.jpg" width="200px" height="90px"/></a>
+			   	    <a  href="#" title="如何将音视频插入PPT里？" > <img class="imgleft" src="飞舟博客/images/blog/banner/timthumb1.jpg" width="200px" height="90px"/></a>
+			   </div>
+			   <div class="dv43">
+			   	   <img class="img1" src="飞舟博客/images/blog/banner/banner4.jpg" width="920px" height="370px"/>
+			   	    <img class="img1" src="飞舟博客/images/blog/banner/banner2.jpg" width="920px" height="370px"/>
+			   	    <img class="img1" src="飞舟博客/images/blog/banner/banner3.jpg" width="920px" height="370px"/>
+			   	    <img class="img1" src="飞舟博客/images/blog/banner/banner1.jpg" width="920px" height="370px"/>
+			   </div>
+			 <div class="dv46">
+			      <div class="dv461">Web前端</div> 
+			      <div class="dv462">meta标签全解</div>
+			       <div class="dv463"><img class="dv464" src="飞舟博客/images/blogs/timthumb.jpg">
+			     
+ 站点导航： http-equiv name 其他 <meta>元素可提供相关页面的元信息(meta-information)，比如针对搜索引擎的页面描述和关键词。 标签位于文档的头部<head>内，是html语言里的一个辅助性标签，里面的内容不会显示在... 
+			   <br />  <br />  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/ren.png" />&nbsp;<font color="lightseagreen">faychou1989</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/shizhong.png">&nbsp;<font color="gray">5个月前（07-07）</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/eyes.png">&nbsp;<font color="gray">344</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/qipao.png">&nbsp;<font color="lightseagreen">0评论</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/xin.png">&nbsp;<font color="lightcoral">25喜欢</font>
+			        </div>
+			     
+			 </div>
+			 
+			 <div class="dv46">
+			      <div class="dv461">office</div> 
+			      <div class="dv462">PowerPoint里面无法进行中文输入，原因为何？</div>
+			       <div class="dv463"><img class="dv464" src="飞舟博客/images/blogs/timthumb (1).jpg">
+			     
+ 微软的office系列软件很是好用，但是也伴随着很多的问题，今天就来谈谈PPT中无法输入中文的情况。 具体的症状应该是这样的： 在其它软件中（如记事本中）是可以打出中文字符的； 唯独PPT中只能输入英文，一旦切换到中文输入法时就无法打出中文； 可是却可以通过复制粘贴的方式将中文粘... 
+			  <br />  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/ren.png" />&nbsp;<font color="lightseagreen">faychou1989</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/shizhong.png">&nbsp;<font color="gray">5个月前（07-07）</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/eyes.png">&nbsp;<font color="gray">344</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/qipao.png">&nbsp;<font color="lightseagreen">0评论</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/xin.png">&nbsp;<font color="lightcoral">25喜欢</font>
+			        </div>
+			     
+			 </div>
+			 
+			 <div class="dv46">
+			      <div class="dv461">图片图标</div> 
+			      <div class="dv462">萌妹子必备：180+超可爱的PNG素材 </div>
+			       <div class="dv463"><img class="dv464" src="飞舟博客/images/blogs/timthumb (2).jpg">
+			     
+超可爱，萌萌哒的PNG素材！ 重要！获取方法： 关注微信号“飞sir学府”后回复关键字“解压密码”，即可获得压缩包解压密码。 下载地址 转载请注明：飞舟博客 » 萌妹子必备：180+超可爱的PNG素材...  
+			  <br />  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/ren.png" />&nbsp;<font color="lightseagreen">faychou1989</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/shizhong.png">&nbsp;<font color="gray">5个月前（07-07）</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/eyes.png">&nbsp;<font color="gray">344</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/qipao.png">&nbsp;<font color="lightseagreen">0评论</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/xin.png">&nbsp;<font color="lightcoral">25喜欢</font>
+			       </div>
+			 </div>
+			 
+			 <div class="dv46">
+			      <div class="dv461">图片图标</div> 
+			      <div class="dv462">萌妹子必备：180+超可爱的PNG素材 </div>
+			       <div class="dv463"><img class="dv464" src="飞舟博客/images/blogs/timthumb (2).jpg">
+			     
+超可爱，萌萌哒的PNG素材！ 重要！获取方法： 关注微信号“飞sir学府”后回复关键字“解压密码”，即可获得压缩包解压密码。 下载地址 转载请注明：飞舟博客 » 萌妹子必备：180+超可爱的PNG素材...  
+			  <br />  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/ren.png" />&nbsp;<font color="lightseagreen">faychou1989</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/shizhong.png">&nbsp;<font color="gray">5个月前（07-07）</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/eyes.png">&nbsp;<font color="gray">344</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/qipao.png">&nbsp;<font color="lightseagreen">0评论</font>&nbsp;&nbsp;&nbsp;&nbsp;
+			   <img src="飞舟博客/images/blogs1/xin.png">&nbsp;<font color="lightcoral">25喜欢</font>
+			       </div>
+			 </div>
+			
+			<div class="dv47">
+				<div class="dv471">1</div>
+				<div class="dv472">2</div>
+				<div class="dv472">3</div>
+				<div class="dv472">4</div>
+				<div class="dv472">5</div>
+				<div class="dv473">下一页</div>
+			 </div>
+ </div>
+			   
+			    <div class="dv44">
+			    	<div class="dv441">
+			    		<div class="d1">
+			    			<img src="飞舟博客/images/blogs1/weibo.jpg"width="50px" height="50px">
+			    		</div>
+			    		<div class="d1">
+			    			<img src="飞舟博客/images/blogs1/QQweibo-hover.png"width="50px" height="50px" >
+			    		</div>
+			    		<div class="d1">
+			    			<img src="飞舟博客/images/blogs1/weixin-hover.png"width="50px" height="50px" >
+			    		</div>
+			    		<div class="d1">
+			    			<img src="飞舟博客/images/blogs1/youxiang.jpg"width="50px" height="50px">
+			    	    </div>
+			    	    <div>
+			    			<img src="飞舟博客/images/blogs1/QQ.jpg" width="50px" height="50px">
+			    		</div>
+			    		<div class="d1">
+			    			<img src="飞舟博客/images/blogs1/shoucang.jpg"width="50px" height="50px" >
+			    		</div>
+			    	</div>
+			       <div class="dv442">
+			       	   <font color="lightseagreen">邮箱订阅</font>
+			       	   <hr color="lightseagreen"style="margin-top: 20px;margin-bottom: 20px;" />
+			       	   填写您的邮箱地址，订阅更多的精彩内容：
+			       	   <div class="d2">your@email.com</div>
+			       	    <div class="d3">订阅</div>
+			       </div>
+			     <div class="dv443">
+			       	   分类目录
+			       	   <hr color="lightseagreen"style="margin-top: 20px;margin-bottom: 20px;" />
+			       	   <table>
+			       	   	<tr>
+			       	   		<td>office</td>
+			       	   		<td>web前端</td>
+			       	   	</tr>
+			       	   	<tr>
+			       	   		<td>其他</td>
+			       	   		<td>图片图标</td>
+			       	   	</tr>
+			       	   	<tr>
+			       	   		<td>计算机</td>
+			       	   		<td>软件</td>
+			       	   	</tr>
+			       	   </table>
+			     </div>
+			     <div class="dv444">
+			       	     标签云
+			       	   <hr color="lightseagreen"style="margin-top: 20px;margin-bottom: 20px;" />
+			       	    <div class="di1">office(10)</div>
+			       	   	<div class="di2">ppt(8)</div>
+			       	   	<div class="di3">计算机（17）</div>
+			       	   	<div class="di4">o资源搜索（10）</div>
+			       	   	<div class="di5">网络安全（9）</div>
+			       	   	<div class="di6">excel（6）</div>
+			       	   	<div class="di7">图片资源（6）</div>
+			       	   	<div class="di8">word（5）</div>
+			       	   	<div class="di9">互联网（6）</div>
+			       	   	<div class="di10">网络（3）</div>
+			     </div>
+			     
+			     <div class="dv445">
+			       	    近期文章
+			       	   <hr color="lightseagreen"style="margin-top: 20px;margin-bottom: 20px;" />
+			       	    meta标签全解
+			       	   <hr color="gainsboro"style="margin-top: 20px;margin-bottom: 20px;" />
+			       	   	 PowerPoint里面无法进行中文输入，原因为何？
+			       	   <hr color="gainsboro"style="margin-top: 20px;margin-bottom: 20px;" />
+			       	   	 萌妹子必备：180+超可爱的PNG素材
+			       	   <hr color="gainsboro"style="margin-top: 20px;margin-bottom: 20px;" />
+			       	   	 如何在PPT中设置移动鼠标出现标注文字？
+			       	   <hr color="gainsboro"style="margin-top: 20px;margin-bottom: 20px;" />
+			       	         同名文件被替换覆盖后可以恢复吗？
+			       	   
+			     </div>
+	       </div>
+     </div>
+</div>
+		<div class="div5">
+			<a href="#web1"><img class="imggd" src="飞舟博客/images/blogs/top1.jpg" width="50px" height="50px"/></a>
+		</div>
+	</body>
+</html>
