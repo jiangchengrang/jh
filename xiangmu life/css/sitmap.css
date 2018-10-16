@@ -1,0 +1,59 @@
+.sitemap{
+	width:1180px;
+	height:338px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-top: 10px solid black;
+}
+.s1{
+	width: 169px;
+	height: 230px;
+	border-right: 1px solid black;
+	float: left;
+	
+}
+.s2{
+	width: 247px;
+	height: 230px;
+	float: left;
+}
+.sp1{
+	font-weight:700 ;
+	margin-left: 15px;
+}
+footer{
+	width:100%;
+	clear: both;
+	height:107px;
+	border:1px solid black;
+	background: black;
+}
+.p1{
+	margin-left: 570px;
+	margin-top: 25px;
+}
+  .a1{
+  	text-decoration: none;
+	color: black;
+  }
+  .a1:hover{
+	text-decoration: underline;
+}
+.a2{
+	color: dodgerblue;
+	text-decoration: none;
+  }
+  .a2:hover{
+	color: white;
+}
+.p11{
+	color:grey;
+	margin-left: 570px;
+}
+.p12{
+	color:gainsboro;
+	text-decoration: none;
+  }
+.p12:hover{
+	color: red;
+}

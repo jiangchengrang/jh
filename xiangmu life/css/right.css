@@ -1,0 +1,69 @@
+.dv1{
+	display: flex;
+	width: 250px;
+	height: 79px;
+	border-bottom: 1px dashed;
+	margin-top: 20px;
+}
+.dv11 img{
+	width: 83px;
+	height: 49px;
+}
+.dv12{
+	width: 150px;
+	font-size: 10px;
+	margin-left: 20px;
+}
+
+.dv2{
+	overflow: hidden;
+	margin-top: 20px;
+}
+.dv2 img{
+	width: 250px;
+	height: 68px;
+}
+.Zan{
+	font-size: 20px;
+}
+.dz{
+	display: flex;
+	width: 250px;
+	
+}
+.dz span{
+	width: 90px;
+	height: 30px;
+	display: block;
+	
+}
+.dz #Zan{
+	position: absolute;
+	top: 30px;
+	left: 150px;
+	
+}
+.dz #Zanrs{
+	position: absolute;
+	top: 60px;
+	left: 150px;
+}
+.dianzan{
+	width: 82px;
+	height: 100px;
+	background: url(../img/like1.png);
+	
+}
+.rdwz{
+	margin-top: 40px;
+}
+
+.dianzan:hover{
+	background: url(../img/like2.png);
+}
+/*.dianzand1:hover{
+	src: url(../img/like2.png);
+}
+.dianzan1:hover{
+	display: none;
+}*/

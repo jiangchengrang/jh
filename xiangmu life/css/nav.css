@@ -1,0 +1,163 @@
+/**{
+	margin: 0;
+	padding: 0;
+}*/
+header{
+	background: #333;
+}
+a{
+	text-decoration: none;
+}
+/*logo*/
+.head-img{
+	float:left;
+	margin-left:22% ;
+	position: relative;
+}
+.head-img img{
+	height:72px;
+	text-align: center;
+}
+/*菜单*/
+.head-menu1{
+	list-style: none;
+	/*position: absolute;*/
+	position: relative;
+	top:-12px;
+	
+}
+.head-menu1 li{
+	float:left;
+	width:100px;
+	height:100%;
+	text-align: center;
+}
+.head-menu1>li>a{
+	text-decoration: none;
+	color:#C3C6CA;
+	font-size:15px;
+	font-family: "Microsoft Yahei";
+	line-height: 72px;
+}
+.head-menu1 li:hover .a-1{
+	color: dodgerblue;
+}
+
+/*二级菜单*/
+.head-menu2{
+	list-style: none;
+	position: relative;
+	top:0%;
+	left:-22%;
+	display: none;
+	
+}
+
+.head-menu2 li{
+	width:120px;
+	border: 1px solid black;
+	height:25px;
+	text-align: left;
+	line-height: 25px;
+	background: #666;
+
+	
+}
+.head-menu2 li a{
+	color:white;
+	text-decoration: none;
+	font-size:14px;
+}
+.first-menu:hover .head-menu2 {
+	display: block;
+}
+.head-menu2 li:hover{
+	background: #C3C6CA;
+	
+}
+.head-menu2 li:hover a{
+	color:dodgerblue;
+	text-decoration: none;
+}
+.head-menu3{
+	list-style: none;
+	position: relative;
+	display: none;
+	left:-22%;
+}
+.head-menu3 li{
+	width:120px;
+	border: 1px solid black;
+	height:25px;
+	text-align: left;
+	line-height: 25px;
+	background: #666;
+
+	
+}
+
+.head-menu3 li a{
+	color:white;
+	text-decoration: none;
+	font-size:14px;
+}
+.last-menu:hover .head-menu3 {
+	display: block;
+}
+.head-menu3 li:hover{
+	background: #C3C6CA;
+	
+}
+.head-menu3 li:hover a{
+	color:dodgerblue;
+}
+
+/*搜索功能*/
+.head-search{
+	float:left;
+	overflow: hidden;
+	width:300px;
+	height:72px;
+	position: relative;
+	top:-8px;
+}
+.head-search form{
+	margin-left:33% ;
+	margin-top: 10px;
+	width:300px;
+	display: block;
+}
+.head-search input[type="input"]{
+	width:160px;
+	height:30px;
+	background: black;
+	
+}
+ input::-webkit-input-placeholder{
+ 	color:white;
+ 	
+ }
+.head-search  img{
+	position: relative;
+	top:10px;
+	width:30px;
+	height:30px;
+}
+.head-search input:active div{
+	display: block;
+}
+.input-hover{
+	width:162px;
+	height:20px;
+	background: white;
+	position: relative;
+	left:99px;
+	top:0px;
+	border: 1px solid black;
+	line-height: 20px;
+	display: none;
+}
+.input-hover:hover{
+	background: whitesmoke;
+	
+}

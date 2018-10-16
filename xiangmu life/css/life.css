@@ -1,0 +1,128 @@
+body{
+	background: #dedede;
+}
+.di2{
+	width: 1500px;
+	height: 1880px;
+	float: left;
+	margin-top:80px;
+	margin-left: 370px;
+	margin-bottom: 10px;
+}
+.diw{
+	width: 400px;
+	height: 350px;
+	background: white;
+	padding: 30px;
+	position: relative;
+	float: left;
+	margin: 20px;
+	margin-bottom: 25px;
+}
+.pp1{
+	color: darkgrey;
+}
+.pp2{
+	font-size: 20px;
+	color: gray;
+}
+.pp2:hover{
+	color: darkred;
+}
+.imgi:hover{
+	opacity: 0.5;
+}
+.lb{
+	width: 40px;
+	height: 45px;
+	background: black;
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 45px;
+	font-size: 20px;
+	margin-left: 1030px;
+}
+.lb1{
+	width: 40px;
+	height: 45px;
+	border: 1px solid grey;
+	color: black;
+	text-align: center;
+	line-height: 45px;
+	font-size: 20px;
+	margin-left: 10px;
+	float: left;
+}
+.lb2{
+	width: 60px;
+	height: 45px;
+	border: 1px solid grey;
+	color: black;
+	text-align: center;
+	line-height: 45px;
+	font-size: 15px;
+	margin-left: 10px;
+	float: left;
+}
+.lb3{
+	width: 110px;
+	height: 45px;
+	color: black;
+	line-height: 45px;
+	font-size: 15px;
+	margin-left: 10px;
+	float: left;
+}
+.lb1:hover{
+	background: black;
+	color: white;
+}
+.lb2:hover{
+	background: black;
+	color: white;
+}
+.dil{
+	width: 1050px;
+	height: 8700px;
+	border-right: 1px solid black;
+	float: left;
+	margin-left: 570px;
+	margin-right: 40px;
+	margin-top: 80px;
+}
+.ail{
+	color: black;
+	font-size: 20px;
+}
+.ail:hover{
+	color: dodgerblue;
+}
+.spl1{
+	margin-top: 45px;
+	font-size: 30px;
+	font-weight: 600;
+}
+.spl2{
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: 300;
+}
+.imgll{
+	margin-top: 40px;
+	margin-left: 100px;
+}
+.imgl2{
+	margin-top: 40px;
+}
+.spl3{
+	margin-left: 750px;
+	font-weight: 200;
+}
+.spl4{
+	font-weight: 700;
+}
+.spl5{
+	font-weight: 200;
+	font-size: 20px;
+}
