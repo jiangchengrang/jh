@@ -1,0 +1,78 @@
+@media  screen and (min-width:1000px ) {
+  header{
+ 	width: 100%;
+ 	height: 50px;
+ 	background: green;
+ }	
+ .dvm{
+ 	width: 30%;
+ 	height: 200px;
+ 	background: red;
+ 	float: left;
+ 	margin: 40px;
+ }
+ footer{
+ 	width: 100%;
+ 	height: 50px;
+ 	background: yellow;
+ 	clear: both;
+ }
+ 
+ p{
+		display: none;
+	}	
+}
+@media  screen and (min-width: 800px) and (max-width: 1000px) {
+   header{
+ 	width: 100%;
+ 	height: 50px;
+ 	background: gray;
+ }	
+ .dvm{
+ 	width: 30%;
+ 	height: 200px;
+ 	background: gray;
+ 	margin: 40px;
+ }
+ footer{
+ 	width: 100%;
+ 	height: 50px;
+ 	background: gray;
+ 	clear: both;
+ }
+ 
+ p{
+		display: none;
+	}	
+}
+@media  screen and (max-width: 800px) {
+   body{
+		background: palevioletred;
+	}
+	/*header{
+ 	width: 100%;
+ 	height: 50px;
+ 	background: grey;
+ }	
+ .dvm{
+ 	width: 30%;
+ 	height: 200px;
+ 	background: grey;
+ 	margin: 40px;
+ }
+ footer{
+ 	width: 100%;
+ 	height: 50px;
+ 	background: grey;
+ 	clear: both;
+ }*/
+ p{
+		color: white;
+		font-size: 50px;
+		text-align: center;
+		line-height: 1000px;
+	}
+ p{
+		display: block;
+	}	
+}

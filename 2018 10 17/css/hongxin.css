@@ -1,0 +1,133 @@
+header{
+	height: 50px;
+	background:#666666;
+	line-height: 50px;
+	color: white;
+}
+.sp1{
+	margin-left: 80px;
+}
+.sp2{
+	color: gainsboro;
+	text-decoration: none;
+}
+.imhdw{
+	position: relative;
+}
+
+.img1{
+	position: absolute;
+	top: 300px;
+	left: 200px;
+}
+.img2{
+	position: absolute;
+	top: 120px;
+	left: 100px;
+}
+.img3{
+	position: absolute;
+	top: 190px;
+	left: 1400px;
+}
+.p1{
+	font-size: 50px;
+	color: white;
+	position: absolute;
+	top: 400px;
+	left: 250px;
+}
+.dvk,.dvk1{
+	height: 600px;
+	display: flex;
+	margin-top: 50px;
+}
+.dvz{
+	width: 30%;
+	margin-right: 30px;
+	text-align: left;
+	margin-left: 20%;
+}
+.dv1z{
+	width:16%;
+	margin-right: 30px;
+	margin-left: 20%;
+	margin-top: 140px;
+	font-size: 25px;
+}
+.dv2z{
+	width:16%;
+	margin-right: 30px;
+	margin-left: 100px;
+	margin-top: 140px;
+	font-size: 25px;
+}
+.pvz{
+	font-size: 25px;
+}
+.pvz1{
+	font-size: 20px;
+}
+.dvaq{
+	height: 550px;
+	background: #f2f2f2;
+	text-align: center;
+	padding: 30px;
+}
+.dvaq1{
+	height: 600px;
+	background: #f2f2f2;
+	padding: 30px;
+}
+.dvaq1 p{
+	text-align: center;
+}
+
+.pdv{
+	font-size: 50px;
+	font-weight: 800;
+}
+.dva4{
+	width:450px;
+	height: 340px;
+	border: 1px solid black;
+	margin-left: 300px;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+}
+.dva41{
+	width:450px;
+	height: 340px;
+	border: 1px solid black;
+	margin-left: 25px;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+}
+.dva4 img{
+	margin-top: 50px;
+}
+.dva41 img{
+	margin-top: 50px;
+}
+.dvk1 img{
+	margin-top: 50px;
+}
+.impj{
+	margin-left: 800px;
+}
+.sppj{
+	margin-left: 855px;
+}
+.sppj1{
+	margin-left: 170px;
+}
+footer{
+	height: 120px;
+	background:#666666;
+	text-align: center;
+	line-height: 120px;
+	font-size: 20px;
+	color: gainsboro;
+}
