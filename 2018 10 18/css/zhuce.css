@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.register{
+	width: 700px;
+	height: 560px;
+	margin: 50px auto 0;
+	/*background: lightsalmon;*/
+	display: flex;
+}
+.register_left{
+	width: 299px;
+	height: 475px;
+	border-right: 1px solid;
+}
+.register_left a{
+	display: inline-block;
+	margin-left: 50px;
+	float: right;
+}
+.wz{
+	width: 300px;
+	height: 30px;
+	text-align: right;
+	font-size: 24px;
+	color: #69a81e;
+	float: right;
+}
+.register_title{
+	width: 360px;
+	height: 51px;
+	/*background: deepskyblue;*/
+	border-bottom: 1px solid #CECECE;
+	margin-left: 35px;
+}
+.register_title a{
+	color: #69A81E;
+	display: block;
+	float: right;
+	text-decoration: none;
+}
+.register_title h1{
+	width: 96px;
+	height: 50px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #CECECE;
+	float: left;
+	
+}
+.zc{
+	margin-top: 30px;
+	margin-left: 35px;
+}
+.zc li{
+	display: block;
+	display: flex;
+	width: 360px;
+	height: 70px;
+}
+.zc label{
+	display: block;
+	width: 70px;
+	height: 40px;
+	/*background: gold;*/
+	line-height: 40px;
+	color: #CECECE;
+}
+.zc .input{
+	width: 288px;
+	height: 36px;
+	/*background: deepskyblue;*/
+	
+}
+#input{
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.zc input:focus{
+	outline: none;
+}
+#zc{
+	width: 360px;
+	height: 40px;
+	background: #37AB40;
+	border: 0;
+}
+footer{
+	width: 100%;
+	height: 100px;
+	border-top: 2px solid #37AB40;
+	margin-top: 50px;
+}
+.foot{
+	margin: 40px auto 0;
+	/*width: 320px;*/
+	text-align: center;
+	font-size: 12px;
+}
+.foot a{
+	text-decoration: none;
+	color: black;
+	
+}
+p{
+	text-align: center;
+	font-size: 12px;
+	margin-top: 5px;
+}
+i{
+	/*width: 30px;
+	height: 30px;
+	border-radius: 50px;*/
+	color: #37AB40;
+}

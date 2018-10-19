@@ -1,0 +1,440 @@
+/*--------------------------首页部分*/
+/*头部导航部分*/
+header{
+	height: 45px;
+    background:#F7F7F7;
+    border: 1px solid black;
+}
+/*头部导航左边*/
+.header_Nav_Left{
+	width:150px;
+	height: 45px;
+	float: left;
+    text-align: center;
+    margin-left: 12%;
+    line-height: 45px;
+}
+/*头部导航中间*/
+.header_Nav_Main{
+	width: 70%;
+	height: 45px;
+	float: left;
+}
+/*头部导航中间的每个导航信息*/
+.header_Nav{
+	margin-top: 5px;
+	width:90px;
+	height: 30px;
+    text-align: center;
+    margin-left: 6px;
+    line-height: 30px;
+    float: right;
+    color: gray;
+    border-right: 1px solid black;
+}
+/*头部导航中间的第一个导航信息*/
+.header_Nav:first-child{
+	border-right: 0px;
+}
+/*头部下方的logo,搜索栏，导航栏等部分*/
+.ttsx_top{
+	height: 204px;
+	border-bottom: 1px solid green;
+}
+.ttsx_top_img{
+	width: 250px;
+	height: 100px;
+	float: left;
+	margin-left: 12%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+.ttsx_top_search_1{
+	width: 40%;
+	height: 60px;
+	float: left;
+	margin-top:30px;
+	margin-left: 120px;
+	border: 1px solid green;
+	margin-bottom: 25px;
+}
+.ttsx_top_search_2{
+	width: 16%;
+	height: 60px;
+	float: left;
+	margin-top:30px;
+	border: 1px solid gray;
+	margin-left: 45px;
+	margin-bottom: 25px;
+	
+}
+/*头部下方的导航栏*/
+.ttsx_top_bottom{
+	width: 100%;
+	height: 60px;
+	clear: both;
+}
+.ttsx_top_bottom_nav{
+	width: 110px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 15px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 15px;
+	border-right: 1px solid black;
+}
+.ttsx_top_bottom_nav:first-child{
+	margin-left: 12%;
+	width: 300px;
+	height: 60px;
+	line-height: 60px;
+	background: forestgreen;
+	color: white;
+	margin-top: 0px;
+}
+/*首页中间部分*/
+.ttsx_Main{
+	width: 76%;
+	height: 1790px;
+	margin-left: 12%;
+}
+.ttsx_banner{
+	width: 100%;
+	height: 360px;
+	display: flex;
+}
+.ttsx_banner_left{
+	width: 300px;
+	height: 360px;
+}
+.ttsx_banner_main{
+	width: 1140px;
+	height: 360px;
+}
+.ttsx_banner_right{
+	width: 480px;
+	height: 360px;
+}
+li{
+	width: 300px;
+	height: 59px;
+	border-bottom: 1px solid gainsboro;
+	display: inline-block;
+}
+.li_one{
+	background: url(../img/icons.png)8px 5px;
+	background-repeat: no-repeat;
+}
+.li_two{
+	background: url(../img/icons.png)8px -35px;
+	background-repeat: no-repeat;
+}
+.li_three{
+	background: url(../img/icons.png)8px -80px;
+	background-repeat: no-repeat;
+}
+.li_four{
+	background: url(../img/icons.png)8px -125px;
+	background-repeat: no-repeat;
+}
+.li_five{
+	background: url(../img/icons.png)8px -170px;
+	background-repeat: no-repeat;
+}
+.li_six{
+	background: url(../img/icons.png)8px -210px;
+	background-repeat: no-repeat;
+}
+li p{
+	font-size: 20px;
+	margin-left: 80px;
+}
+.ttsx_content{
+	height: 350px;
+	margin-top: 30px;
+}
+.ttsx_content_text{
+	height: 50px;
+	border-bottom: 2px green solid;
+}
+.ttsx_content_text_left{
+	text-align: left;
+	line-height: 50px;
+	color: green;
+	font-weight: 700;
+	font-size: 25px;
+}
+.ttsx_content_text_right{
+	float: right;
+	line-height: 50px;
+	font-size: 20px;
+}
+.ttsx_content_text_right:hover{
+	color: red;
+}
+.ttsx_content_img{
+	height: 400px;
+	display: flex;
+}
+.ttsx_content_img_im{
+	width: 350px;
+	height: 400px;
+	border: 1px solid gainsboro;
+	text-align: center;
+	font-size: 20px;
+}
+.ttsx_content_img_im:hover{
+	opacity: 0.7;
+	border: 1px solid orange;
+}
+footer{
+	height: 80px;
+	border-top: 1px solid green;
+	text-align: center;
+}
+footer span:hover{
+	color: red;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	color: red;
+}
+/*--------------------------速冻食品部分*/
+/*速冻食品中间部分*/
+.sdsp_Main{
+	width: 76%;
+	height: 750px;
+	margin-left: 12%;
+}
+.sdsp_Main_top{
+	width: 100%;
+	height: 65px;
+	text-align:left;
+	line-height: 65px;
+	font-size: 20px;
+}
+.sdsp_Main_left{
+	width: 301px;
+	height: 600px;
+	border: 1px solid gainsboro;
+	border-top:1px solid green;
+	float: left;
+	text-align:center;
+}
+.sdsp_Main_left img{
+	margin-left: 10px;
+}
+.sdsp_Main_right{
+	width: 79%;
+	height: 600px;
+	float: left;
+	margin-left: 30px;
+}
+.sdsp_Main_right_top{
+	height: 50px;
+	background: beige;
+}
+.sdsp_Main_right_top_nav{
+	width: 120px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+}
+.sdsp_Main_right_top_nav:first-child{
+    background: green;
+    color: white;
+   height: 50px;
+   line-height: 50px;
+}
+.sdsp_Main_right_top_img{
+	width: 20%;
+	height: 260px;
+	float: left;
+	text-align: center;
+}
+
+.sdsp_Main_right_bottom{
+	height: 80px;
+	clear: both;
+}
+.sdsp_Main_right_bottom_page{
+	height: 50px;
+	width: 50px;
+	background: white;
+	margin: 20px 0px 0px 10px;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+}
+.sdsp_Main_right_bottom_page:first-child{
+	margin-left: 30%;
+	background: darkolivegreen;
+	color: white;
+}
+.sdsp_Main_right_bottom_page:last-child{
+	width: 60px;
+	background: lightskyblue;
+}
+/*--------------------------商品详情部分*/
+/*中间部分*/
+.spxq_Main{
+	width: 76%;
+	height: 1200px;
+	margin-left: 12%;
+}
+.spxq_Main_top{
+	width: 100%;
+	height: 65px;
+	text-align:left;
+	line-height: 65px;
+	font-size: 20px;
+}
+.spxq_Main_content{
+	height: 450px;
+	width: 100%;
+	border:1px solid gainsboro;
+	float: left;
+}
+.spxq_Main_right{
+	width:64%;
+	height: 450px;
+	float: left;
+	float: right;
+	position: relative;
+}
+.spxq_Main_right_main{
+	width: 94%;
+	height: 80px;
+	background: peachpuff;
+	text-align: center;
+	line-height: 80px;
+}
+.spxq_Main_right_main_two{
+	width: 94%;
+	height: 100px;
+	text-align:left;
+	font-size: 20px;
+	line-height: 100px;
+}
+.spxq_Main_right_bottom{
+	height: 80px;
+	clear: both;
+}
+.spxq_Main_right_bottom_page{
+	height: 50px;
+	width: 50px;
+	background: white;
+	margin: 20px 0px 0px 10px;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+}
+.spxq_Main_right_bottom_page:first-child{
+	margin-left: 30%;
+	background: darkolivegreen;
+	color: white;
+}
+.spxq_Main_right_bottom_page:last-child{
+	width: 60px;
+	background: lightskyblue;
+}
+.spxq_Main_right_bottom{
+	width: 250px;
+	height: 60px;
+	background: lightpink;
+	position: absolute;
+	top: 405px;
+	left: 0px;
+	border: 1px solid crimson;
+	color: crimson;
+	line-height: 60px;
+	text-align: center;
+	font-size: 20px;
+	float: left;
+}
+.spxq_Main_right_bottom:last-child{
+	position: absolute;
+	top: 405px;
+	left: 285px;
+	background: crimson;
+	color: white;
+}
+/*--------------------------登录界面部分*/
+.ttsx_dl_top{
+	height: 160px;
+}
+.ttsx_dl_top img{
+	margin: 40px 0px 0px 26%;
+}
+.ttsx_dl_main{
+	height: 600px;
+	background: forestgreen;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	display: flex;
+}
+.ttsx_dl_main img{
+	margin:85px 0px 0px 26%;
+	
+}
+.ttsx_dl_main_text{
+	width: 50px;
+	height: 530px;
+	margin: 35px 0px 0px 170px;
+	font-size: 50px;
+	text-align: center;
+	color: white;
+}
+.ttsx_dl_main_form{
+	width: 500px;
+	height: 500px;
+	background: white;
+	margin: 50px 0px 0px 100px;
+}
+.ttsx_dl_main_form_top{
+	width: 90%;
+	height: 80px;
+	margin: 20px 5% 0px 5%;
+	border-bottom: 1px solid gainsboro;
+	line-height: 70px;
+	color: forestgreen;
+	font-size: 20px;
+}
+.ttsx_dl_main_form_top span{
+	font-size: 35px;
+	font-weight:900;
+	color: gray;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+.ttsx_dl_main_form_input{
+	width: 90%;
+	height: 60px;
+	margin: 30px 5% 0px 5%;
+	border: 1px solid gainsboro;
+	display: flex;
+}
+.ttsx_dl_main_form_input input:focus{
+	outline: none;
+}
+.ttsx_dl_main_form_input i{
+    margin-top: 20px;
+  margin-left: 200px;
+}
+.ttsx_dl_main_form_bottom{
+	width: 90%;
+	height: 60px;
+	line-height: 80px;
+	background: forestgreen;
+	color: white;
+	text-align: center;
+	line-height: 60px;
+	font-size: 30px;
+	margin: 30px 5% 0px 5%;
+}
