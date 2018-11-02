@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全选/全不选</title>
+</head>
+<body>
+        <h1>作业2,实现全选/全不选</h1>
+        <input type="button" value="全选/全不选" id='btn'>
+        <input type="checkbox" name="o">爬山
+        <input type="checkbox" name='o'>游泳
+        <input type="checkbox" name="o">打乒乓球
+        <input type="checkbox" name="o">打篮球   
+    <script>
+        var btn=document.getElementById('btn');
+        var check=document.getElementsByName('o');
+        btn.onclick=function(){
+            for(var i=0;i<check.length;i++){
+                //如果选中
+                if(check[i].checked){
+                //不选中
+                 check[i].checked=false
+                }else{
+                 //选中
+                 check[i].checked=true
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

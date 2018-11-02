@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>某年某月的某一天</title>
+</head>
+<body>
+   请输入年份:<input type="text" id="year" placeholder="请输入年份"> 
+   请输入月份:<input type="text" id="month" placeholder="请输入月份">
+   请输入天数:<input type="text" id="day" placeholder="请输入天数">
+   <input type="button" value="算某年某月的某一天" id="btn">
+   <script>
+       //平年和润年
+       //一月份，只算天数
+       //大月小月
+
+     var btn=document.getElementById('btn');
+     btn.onclick=function(){
+        var year=document.getElementById('year').value;
+        var month=document.getElementById("month").value;
+        var day=document.getElementById('day').value;
+         //每一个月都当成31,
+         var totalday=parseInt((month-1)*31)+parseInt(day);
+         if(month==3 || month==4){
+             totalday-=3;
+         }else if(month==5 ||month==6){
+            totalday-=4;
+         }else if(month==7 ||month==8 || month==9){
+            totalday-=5;
+         }else if(month==10 ||month==11){
+            totalday-=6;
+         }else if(month==12){
+            totalday-=7;
+         }if(month>2 && (year%4==0 || (year%400==0 && year%100!=0))){
+            totalday+=1
+         }
+         document.write(year+"年"+month+"月"+day+"是当年的"+totalday+"天");
+     }
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小球的高度</title>
+</head>
+<body>
+   <script>
+       /*
+       一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？ 
+       分析:   
+       */
+       var sum=0;//总高度
+       var z=100;//初始100
+       for(var i=0;i<10;i++){
+           //每一一半高度
+          z/=2;
+          sum+=z;
+       }
+       document.write('小球共经过'+(100+sum)+"米,第10次反弹"+z+"米")
+   </script> 
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 操作样式</title>
+    <style>
+        .box{
+            color: red;
+            box-shadow: 5px 5px 5px blue;
+            font-size: 25px;
+        }
+        .item{
+            color: blueviolet;
+            /* font-size: 25px;
+            font-weight: bold;
+            font-family: '微软雅黑';
+            font-style: italic; */
+            /*复合属性:字体类型 加粗 字体大小/线高  字体系列 */
+            font: bold normal 25px/50px '微软雅黑' ;
+        }
+        .list{
+            border: 3px dashed yellow;
+            width: 200px;
+            height: 50px;
+        }
+        .banner{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   <div id='box'>
+       改变样式
+   </div> 
+   <ul>
+       <li class="item">1</li>
+       <li>2</li>
+   </ul>
+   <div id='content' class="list banner">
+       内容区域
+   </div>
+
+     <script>
+       var box=document.getElementById('box');
+       box.onclick=function(){
+           //classList.add('box'):添加样式
+           //box.classList.add('box');
+           //contains检测是否包含样式
+          isclass=box.classList.contains('list');
+          if(isclass){
+              box.classList.remove('list')
+          }else{
+            box.classList.add('list')
+          }
+       }
+       var li=document.querySelectorAll('.item');
+      li[0].onclick=function(){
+          //移除样式
+         // li[0].classList.remove('item');
+         //切换样式（add 和 remove）
+          li[0].classList.toggle('item');
+      }
+      //检查box有没有类名为.list,有就移除，没有就添加
+      var content=document.getElementById('content');
+       content.className="list";
+       content.onclick=function(){
+         content.className=""
+       }
+    
+    content.onclick=function(){
+        content.classList.toggle('list')
+    }
+    
+     </script>
+</body>
+</html>

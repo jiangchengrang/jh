@@ -1,0 +1,19 @@
+作业1：
+题目：输入某年某月某日，判断这一天是这一年的第几天？ 
+1.程序分析：以3月5日为例，应该先把前两个月的加起来，然后再加上5天即本年的第几天，特殊情况，闰年且输入月份大于3时需考虑多加一天
+作业2：
+  需求1：所有选中属性名
+  需求2：选中改变改变颜色
+   <h1>你喜欢的水果有:</h1>
+    <input type="checkbox" value="苹果"><span>苹果</span>
+    <input type="checkbox" value="香蕉"><span>香蕉</span>
+    <input type="checkbox" value="菠萝"><span>菠萝</span>
+    <input type="checkbox" value="桃子"><span>桃子</span>
+
+作业3：
+    <img src="image/1.jpg">
+    <input type="button" value="走你" id="">
+ 需求:点击轮流切换五张图片
+
+预习:
+  字符/数组相关方法.

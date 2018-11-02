@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自执行函数</title>
+</head>
+<body>
+    <script>
+        /*
+        自执行函数:声明后立即执行，是一种很优雅写法,JS函数高级应用（闭包）
+        */
+    (function(n,m){
+            alert(n+m)
+    })(10,25);
+
+     (function(n,m){
+       var sum=n+m
+       // console.log(add(str))
+      return function(s){
+         console.log( sum+s)
+       }
+     })(5,10)(90);
+
+     function add(str){
+       return str+'和高圆圆'
+     };
+
+     //随机生成名字，年龄，用自执行函数打印不...随机生成名字和年龄   
+     var arr_name=['李东','江欢','张鹏','王立'];
+      var arr=arr_name[Math.floor(Math.random()*arr_name.length)];
+    (function(r){
+      console.log('我的名字为'+r);
+    })(arr)
+
+    </script>
+</body>
+</html>

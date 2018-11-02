@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取对象方法</title>
+    <style>
+        .item{
+            float: left;
+            list-style-type: none;
+            margin-left: 20px
+        }
+    </style>
+</head>
+<body>
+  <div id='box'>
+      我是一个盒子
+     <ul class="list">
+          <li>html</li>
+          <li>css</li>
+          <li>JS</li>
+      </ul> 
+  </div> 
+  <h1>你喜欢的水果有:</h1>
+    <input type="checkbox" value="苹果"><span>苹果</span>
+    <input type="checkbox" value="香蕉"><span>香蕉</span>
+    <input type="checkbox" value="菠萝"><span>菠萝</span>
+    <input type="checkbox" value="桃子"><span>桃子</span>
+  <script>
+      //用选择器方式，返回唯一值
+      var box=document.querySelector('#box');
+      //添加多个行内样式
+      box.style.cssText='color:red;font-size:25px';
+      //用选择器方式，返回是数组
+     var list=document.querySelectorAll('.list li');
+     //list.className='li';
+     for(var i=0;i<list.length;i++){
+         list[i].className='item';
+     }
+    
+     var input=document.querySelectorAll('input[type=checkbox]');
+     for(var i=0;i<input.length;i++){
+         //getAttribute():获取属性名
+         console.log(input[i].getAttribute('value'))
+     }
+
+  </script>
+</body>
+</html>

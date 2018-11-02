@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js 数据类型的转换</title>
+</head>
+<body>
+    <script>
+        /*
+         数据类型的转换:
+         1.转换成正整数类型(parseInt)
+           1.1遇到小数后面的一律不转换
+           1.2只转换数字，一旦遇到不能转换时候就终止
+           1.3一开始都不能转换，NaN
+        2.转换成浮点类型(parseFloat)
+           toFixed():保留n位小数，返回string类型
+        3.Boolean:转换成布尔类型
+        4.Number 转换成数字类型
+        5.String 转换成string
+        */
+        var num=100.9999;
+       // num=parseInt(num);//100     
+        var x='78r9999.0089';
+        x=parseInt(x);//78
+
+        var y='a9999.9999';
+        console.log(parseInt(y));//NaN
+       
+       var z='1e8.9999';
+       console.log(parseInt(z));//1
+
+       console.log(parseFloat(x+num));
+       
+     var count='17a872.999';
+     console.log(typeof parseFloat(parseFloat(count).toFixed(2)));
+
+    console.log(typeof Boolean(x));
+
+   console.log(parseInt((x+299.98).toFixed(2)) + Boolean(x+Boolean(x)) +parseInt(parseFloat(count)));
+
+    </script>
+</body>
+</html>

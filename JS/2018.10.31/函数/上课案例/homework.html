@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>邮箱验证</title>
+</head>
+<body>
+  <label for="email"> 请输入你邮箱:</label>
+  <input type="text" placeholder="请输入合法邮箱" id="email"><span id='text'></span>
+    <script>
+        //失去焦点时候触发
+    dom('email').onblur=function(){
+        var email=dom('email');
+        if(email.value==""){
+          alert('请输入')
+          return false;
+        }else if(email.value.indexOf('@')==-1 ||email.value.indexOf('.')==-1){
+         dom('text').innerHTML='×';
+         dom('text').style.cssText='color:red';
+         dom('email').value="";
+         dom('email').focus();
+        }else{
+            dom('text').innerHTML='✔';
+          dom('text').style.cssText='color:green';
+          dom('email').value="";
+         dom('email').focus();
+        }
+    }
+
+     //获取对象方法
+     function dom(d){
+         return document.getElementById(d);
+     }
+    </script>
+</body>
+</html>

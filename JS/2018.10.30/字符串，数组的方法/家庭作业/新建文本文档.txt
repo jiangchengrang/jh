@@ -1,0 +1,30 @@
+【作业1】
+  请输入你邮箱:<input type="text" placeholder="请输入合法邮箱" id="email"><span>成功</span>
+     <input type="button" value="验证邮箱" id="btn">
+需求:失去焦点(onblur),验证成功(绿色 √)，验证失败(红色 ×)
+
+【作业2】
+ <h1>字符串取反两种方法实现</h1>
+    请输入一串值:<input type="text" value="" placeholder="请输入" id="text">
+    <input type="button" value="取反">
+    新的字符串<input type="text" >
+
+【tab切换】
+
+   <ul>
+       <li>html</li>
+       <li>css</li>
+       <li>js</li>
+   </ul>
+   <div>
+       显示html
+   </div>
+   <div>
+        显示css
+    </div>
+    <div>
+       显示js
+   </div>
+
+预习知识点:
+ 函数定义，函数返回值，函数的参数传递，函数表达式.....

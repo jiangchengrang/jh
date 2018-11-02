@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom 操作属性</title>
+    <style>
+        .img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <img src="image/1.jpg">
+    <input type="button" value="走你" id="btn">
+    <script>
+        var img=document.getElementsByTagName('img');
+        //获取属性
+        var getattr=img[0].getAttribute('src');
+        var btn=document.getElementById('btn');
+        btn.onclick=function(){
+            //修改（属性名，属性值）
+            img[0].setAttribute('src','image/timg.jpg')
+            //删除属性
+            //img[0].removeAttribute('src');
+            //判断是否包含...属性
+           //img[0].hasAttribute('src');
+           img[0].classList.add('img')
+        }
+    </script>
+</body>
+</html>

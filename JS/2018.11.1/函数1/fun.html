@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数 arguments对象,函数表达式，构造函数</title>
+</head>
+<body>
+  <script>
+    /*
+      arguments对象:获取数组,length长度属性
+      函数表达式:一个变量接收函数体，省去函数名就叫匿名函数也叫拉姆达函数
+       注意:函数表达式没法做提升
+       构造函数方式:
+
+    */
+     function fun(){
+       for(var i=0;i<arguments.length;i++){
+           console.log(arguments[i])
+       }
+     }
+    fun(1,2,3);
+
+    //函数表达式
+   var total=function(n,m){
+      return n+m
+    }
+   console.log(total(Math.ceil(Math.random()*100),70));
+
+   //构造函数--对象特征
+   var newFn=new Function('a','b','return a*b');
+   console.log(newFn(Math.ceil(Math.random()*10),Math.ceil(Math.random()*100)))
+    
+  </script>  
+</body>
+</html>

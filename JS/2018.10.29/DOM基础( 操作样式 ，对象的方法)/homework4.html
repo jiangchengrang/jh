@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>完数</title>
+</head>
+<body>
+    <script>
+        /*
+        题目：一个数如果恰好等于它的因子之和，这个数就称为 "完数 "。例如6=1＋2＋3.编程   找出1000以内的所有完数
+         分析：
+          1.变量接收每次余数为0
+          2.sum==i
+        */
+        for(var i=1;i<1000;i++){
+            //余数总和
+            var sum=0;
+            //因子超过总数一半
+            for(var j=1;j<=i/2;j++){
+                if(i%j==0){
+                    //因子累加
+                    sum+=j;
+                }
+            }
+            if(sum==i){
+                document.write('完数有'+i+"<br>")
+            }
+        }
+    </script>
+</body>
+</html>

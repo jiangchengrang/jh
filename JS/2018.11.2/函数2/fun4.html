@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>闭包</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+  <input type="text" placeholder="1" value="苹果">  
+  <input type="text" placeholder="2" value="桃子">
+  <input type="text" placeholder="3" value="香蕉">
+  <input type="text" placeholder="4s" value="菠萝">
+  <div>div1</div>
+  <div>div2</div>
+  <div>div3</div>
+  <div>div4</div>
+  <p>p1</p>
+  <p>p2</p>
+  <p>p3</p>
+  <p>p4</p>
+  <script>
+    //   var input=document.getElementsByTagName('input');
+    //   for(var i=0;i<input.length;i++){
+    //       input[i].onclick=function(s){
+    //           console.log(input[s].getAttribute('value'));
+    //       }(i)
+    //   }
+    var div=document.getElementsByTagName('div');
+    var p=document.getElementsByTagName('p');
+    for(var i=0;i<div.length;i++){
+        div[i].onclick=function(s){
+            return function(){
+               // p[s].style.color='red';
+              // p[s].classList.toggle('red');
+              var r=Math.round(Math.random()*255);
+              var g=Math.round(Math.random()*255);
+              var b=Math.round(Math.random()*255);
+              p[s].style.color='rgb('+r+','+g+','+b+')';
+            }
+        }(i)
+    }
+    
+  </script>
+</body>
+</html>

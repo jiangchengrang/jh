@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串方法</title>
+</head>
+<body>
+     请输入你邮箱:<input type="text" placeholder="请输入合法邮箱" id="email"><span>成功</span>
+     <input type="button" value="验证邮箱" id="btn">
+    <script>
+        /*
+        str.concat(str1)：连接字符串
+        indexOf('l'):返回指定字符串出现的第一个位置
+        lastIndexOf('l')：返回指定字符串最后出现位置
+        replace(old,new):替换
+        */
+        var str='hello',str1='word!!';
+        //连接字符串
+        console.log(str.concat(str1));
+        console.log(str.lastIndexOf('l'));//2
+        console.log(str.indexOf('s'));//-1
+        var email=document.getElementById('email');
+        var btn=document.getElementById("btn");
+        btn.onclick=function(){
+         if(email.value==""){
+            alert('请输入，不能为空');
+            return false;
+         }else if(email.value.indexOf('@')==-1 || email.value.indexOf('.')==-1){
+            alert('请输入合法邮箱');
+            return false;
+         }else{
+             alert('验证成功')
+         }
+        }
+
+        //替换
+        var string1='The q uick brown fox';
+        //replace(old,new)
+        console.log(string1.replace('fox','dog'));
+
+        
+ 
+    </script>
+</body>
+</html>

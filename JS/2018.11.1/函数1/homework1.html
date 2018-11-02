@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>入栈</title>
+</head>
+<body>
+     <h1>作业二</h1>
+     插入数据<input type="text" id="data">
+             <input type="button" value="入栈" onclick="enter()">
+             <input type="button" value="出栈" onclick="out()"><br>
+        入栈数据<input type="text" id="enter"><br>
+        出栈数据<input type="text" id="out"><br>
+        堆栈数据<input type="text" id="data1">
+        <script>
+            //存储数组
+            var arr_data;
+            //入栈
+           function enter(){
+               var data=dom('data');
+               if(data.value==""){
+                   alert('请输入，不能为空');
+                   return false;
+               }else if(arr_data==null){//如果为空 
+               //新建一个数组，并赋值
+                   arr_data=new Array(data.value);
+               }else{
+                //否则数组后面追加
+                arr_data.push(data.value);
+               }
+              //显示入栈数据
+              show_data(arr_data);
+                data.value="";
+                data.focus();
+              //显示堆栈数据 
+              show_stack_data(arr_data);
+           }
+           //出栈的方法
+           function out(){
+             out_data(); 
+           }
+          //出栈
+          function out_data(){
+              var data1=dom('data1')
+           //如果没有数据，不让出栈
+           if(data1.value==""){
+               alert('没有数据');
+               return false;
+           }
+           var new_data=arr_data.pop();
+           dom('out').value+=dom('out').value.length==0?new_data:","+new_data
+           show_stack_data();
+          }
+           //入栈数据方法
+           function show_data(arr_data){
+              //如果没有出栈
+             dom('enter').value=arr_data;
+           }
+           //堆栈数据方法
+           function show_stack_data(){
+             dom('data1').value=arr_data;
+           }
+           //获取对象的方法
+          function dom(d){
+            return document.getElementById(d);
+        }
+        </script>
+</body>
+</html>

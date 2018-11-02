@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串方法 && base64</title>
+</head>
+<body>
+    <script>
+        var str='I like you';
+        //从第几个位置开始...所有...,下标从0开始
+        console.log(str.substr(0));
+        //从第几个位置开始...取..位
+        console.log(str.substr(2,6));
+        //从第。。位置...到位置
+        console.log(str.substring(3,6));
+        console.log(str.slice(3,6));
+        //将小写转换成大写
+        console.log(str.toUpperCase());
+        //将大写转换成小写
+        console.log(str.toLowerCase());
+        //去除字符串前后的空格
+        console.log(str.trim());
+
+        //字串转换成base64，
+        var btoa=btoa(str);
+        //将base64转换成字符
+        console.log(atob(btoa));
+
+        var string1="肖键鑫";
+        //base64
+       var b_base=btoa(encodeURIComponent(string1));
+        console.log(decodeURIComponent(atob(b_base)))
+
+    </script>
+</body>
+</html>

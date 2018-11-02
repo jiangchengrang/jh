@@ -1,0 +1,18 @@
+【作业1】
+请输入第一个数:<input type="text" id="num">
+    请输入第二个数:<input type="text" id="num1">
+    <select>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>%</option>
+    </select>
+    结果:<input type="text" id="total" >
+ 需求:
+   根据以上完成计算器结果运算，用函数实现。
+
+【作业2】
+ 实现如图(入栈.png)入栈效果，并附加队列。
+
+ 

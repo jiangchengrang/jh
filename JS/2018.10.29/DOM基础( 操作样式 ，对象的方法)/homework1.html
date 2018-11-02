@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>斐波拉契数列</title>
+</head>
+<body>
+    <script>
+    /*【程序1】 
+   题目：古典问题：有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一对兔子，假如兔子都不死，问10个月后的兔子总数为多少？ 
+   1.程序分析：兔子的规律为数列1,1,2,3,5,8,13,21....
+    分析:
+     prev1
+     prev2
+     total
+     两数做交互
+     prev1=prev2;  1  1  2
+     prev2=total;  1   2  3
+     total=prev1+prev2  2   1+2=3  2+3=5
+   */
+   var prev1=1,prev2=1,total=0;
+    for(var i=1;i<=10;i++){
+        if(i<3){
+            total=1;
+        }else{
+            prev1=prev2;
+            prev2=total;
+            total=prev1+prev2;
+        }
+    }
+document.write('10个月后的兔子总数为'+total*2+"个");
+    </script>
+</body>
+</html>

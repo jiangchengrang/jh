@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>闭包</title>
+</head>
+<body>
+    <script>
+        /*
+        闭包就是指有权访问另一个函数作用域中的变量的函数，创建闭包的形式，就是在一个函数内部创建另一个函数（函数嵌套）
+        1.局部变量也可以当全局使用,有权限访问函数内部变量
+        2.延长生命周期...变量不会被销毁
+        3.变量不会受污染
+        */    
+        function show_name(){
+            var _name='张...';
+            return function(){
+                return _name;
+            }
+        }
+       var a=show_name();
+       console.log(a());
+
+        //累加(正常的方法)
+        // var total=0;
+        // function add_total(){
+        //     var total=5;s
+        //     total+=10;
+        //     console.log(total);
+        // }
+        // add_total();
+        // console.log(total);
+    
+        var total=100;
+        //闭包
+        function add_total(t){
+            var total=t;
+            return function(s){
+               total+=s;
+               alert(total);
+            }
+        }
+       var a=add_total(5);
+       a(6);//11
+       a(9);//20
+       a(25);//45
+    </script>
+</body>
+</html>

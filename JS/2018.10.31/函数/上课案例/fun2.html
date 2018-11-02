@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数的参数</title>
+
+</head>
+<body>
+    请输入第一个数:<input type="text" id="num">
+    请输入第二个数:<input type="text" id="num1">
+    <select>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>%</option>
+    </select>
+   <!-- <input type="button" id="reslut" value="+"  onclick="result(this.value)"> -->
+    结果:<input type="text" id="total" >
+    <input type="button" value="点击" onclick="week('星期四','睡大觉')">
+
+    请输入年份：<input type="text" id="year" value="2018">
+   <script>
+       function week(day,ball){
+        console.log(day+ball);
+       }
+       week('星期一','打篮球');
+       week('星期二','上课');
+       week('星期三','户外运动');
+
+       function result(op){
+        var total=0;
+        var num=parseInt(document.getElementById('num').value);
+        var num1=parseInt(document.getElementById('num1').value);
+        if(op=='+'){
+            total=num+num1;
+        }
+        document.getElementById('total').value=total;
+       }
+       
+   </script> 
+    <script src="js/fun.js"></script>
+</body>
+</html>

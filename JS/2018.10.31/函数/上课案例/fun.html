@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数定义和调用</title>
+</head>
+<body>
+    <input type="button" value="点我呀" id="btn">
+    <input type="button" value="你在点呀" onclick="test()">
+    <script>
+        /*
+         定义函数的关键字function，方法名(取有意义)
+         调用函数:直接调用,事件调用函数
+        */
+        //调用方法
+        test();
+        //当页面加载的时候,执行函数
+        window.onload=function(){
+            test();
+            test1(); 
+        }
+        window.onload=test();
+        //事件名执行函数，调用函数方法名
+       document.getElementById('btn').onclick=function(){
+          test1();
+       }     
+        function test(){
+          console.log('肖键鑫');
+        }
+        function test1(){
+          console.log('张建');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播</title>
+    <link rel="stylesheet" href="./css/sow.css">
+</head>
+<body>
+    <div class="box">
+        <div id="img_box">
+            <img src="./img/1.jpg" >
+            <img src="./img/2.jpg" >
+            <img src="./img/3.jpg" >
+            <img src="./img/4.jpg" >
+            <img src="./img/5.jpg" >
+        </div>
+        <div class="icon">
+            <img src="./img/left.png" alt="" id="btn_left">
+            <img src="./img/right.png" alt="" id="btn_right">
+        </div>
+    </div>
+    <script>
+       var btn_left=dom('btn_left'),btn_right=dom('btn_right');
+       //点击向左
+       btn_left.onclick=function(){
+         move(-600)
+       }
+       //点击向右边
+       btn_right.onclick=function(){
+        move(600)
+      } 
+      //移动距离
+      function move(w){
+          //获取容器
+        var img_box=dom('img_box');
+        //移动容器left距离
+        img_box.style.left=w+"px";
+        //判断如果到最后一个，回到第一个，如果第一个，再点回到最后一个.
+        
+      }
+       //获取对象的方法
+       function dom(d){
+           return document.getElementById(d);
+       } 
+    </script>
+</body>
+</html>

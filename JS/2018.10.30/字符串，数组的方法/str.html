@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串转义符 和 16进制Unicode</title>
+</head>
+<body>
+   <div id='box'>
+
+   </div> 
+   <script>
+       var box=document.getElementById('box');
+       //转义符
+       box.innerHTML="<input type=\"text\" value=\"\" placeholder=\"请输入你名字\">";
+       var str="";
+      for(var i=1;i<5;i++){
+         str+='今天星期'+i+"\n";
+      }
+      alert(str);
+    /*
+     js内部引擎Unicode,string---16进制Unicode---16string;
+    */ 
+    var str1='今天星期二';
+    //string --16进制Unicode
+    var uncode=str1.charCodeAt(0);
+    //16string
+    console.log("\\u"+uncode.toString());
+      
+      //string---16进制Unicode---字符串
+      console.log(String.fromCharCode(uncode));
+     
+     var arr=['这','是','一','个','数','组'];
+     for(var i=0;i<arr.length;i++){
+       var arr_uncode=arr[i].charCodeAt(arr[i]);
+       console.log("\\u"+arr_uncode.toString());
+        //console.log(String.fromCharCode(arr_uncode))
+     }
+
+
+   </script>
+</body>
+</html>

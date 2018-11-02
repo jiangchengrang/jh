@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*【作业2】
+    题目：猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不瘾，又多吃了一个   第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下   的一半零一个。到第10天早上想再吃时，见只剩下一个桃子了。求第一天共摘了多少。 
+   1.程序分析：采取逆向思维的方法，从后往前推断。
+    分析:
+     最后一天:1个 
+     倒数第二天:4个
+     倒数第三天:10个
+     .....(n+1)*2    
+   */
+   //猴子吃桃子总个数
+    var n=1;
+    for(var i=9;i>0;i--){
+        n=(n+1)*2;
+        document.write('猴子第一个摘了'+n+'个桃子<br>')
+    }
+    //document.write('猴子第一个摘了'+n+'个桃子')
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串取反</title>
+</head>
+<body>
+ <h1>字符串取反两种方法实现</h1>
+ 请输入一串值:<input type="text" value="" placeholder="请输入" id="text">
+ <input type="button" value="取反" id="btn">
+ 新的字符串<input type="text" id='val'>
+ <script>
+     //方法1(reverse())
+   /* dom('btn').onclick=function(){
+        var text=dom('text').value;
+       dom('val').value=text.split('').reverse().join('')
+    }*/
+
+
+    //方法2(string)
+   /* dom('btn').onclick=function(){
+        var text=dom('text').value.split('');
+        var str="";
+        for(var i=text.length-1;i>=0;i--){
+            str+=text[i];
+        }
+        dom('val').value=str;
+    }*/
+
+    //方法3(pop)
+    dom('btn').onclick=function(){
+        var text=dom('text').value.split('');
+        var str="";
+        for(var i=text.length;i>0;i--){
+            str+=text.pop()
+        }
+        dom('val').value=str;  
+    }
+
+    //获取对象方法
+     function dom(d){
+         return document.getElementById(d);
+     }
+ </script>
+</body>
+</html>

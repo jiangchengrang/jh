@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选中改变颜色(index下标)</title>
+    <style>
+        .color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+ <h1>你喜欢的水果有:</h1>
+ <input type="checkbox" value="苹果"><span>苹果</span>
+ <input type="checkbox" value="香蕉"><span>香蕉</span>
+ <input type="checkbox" value="菠萝"><span>菠萝</span>
+ <input type="checkbox" value="桃子"><span>桃子</span>
+  <script>
+      var input=document.getElementsByTagName('input');
+      var span=document.getElementsByTagName('span');
+      //方法1
+      for(var i=0;i<input.length;i++){
+          //指定添加下标
+          input[i].index=i;
+          input[i].onclick=function(){
+              //如果选中，
+              if(input[this.index].checked){
+                  //添加样式
+                  span[this.index].classList.add('color')
+              }else{
+                  //移除样式
+                span[this.index].classList.remove('color')
+              }
+          }
+      }
+    
+      //方法2
+      for(var i=0;i<input.length;i++){
+          //闭包方式获取到预期的下标
+          input[i].onclick=function(s){
+            return function(){
+                if(input[s].checked){
+                    span[s].classList.add('color')
+                }else{
+                    span[s].classList.remove('color')
+                }
+            }
+          }(i)
+      }
+
+  </script>  
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数作用域1</title>
+</head>
+<body>
+    <script>
+        var count=0;
+        function test(){
+            //缺少var,全局变量
+            for(i=0;i<3;i++){
+             count+=i;
+            }
+        }
+        test();
+        console.log(i);//3
+        console.log(count);//3
+
+        function test1(){
+            i++;
+        }
+        test1();
+        console.log(i);//4
+    </script>
+</body>
+</html>

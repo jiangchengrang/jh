@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数的参数</title>
+    <script src="js/fun.js"></script>
+</head>
+<body>
+    <input type="button" value="点击获取我喜欢的水果" onclick="fruit('苹果','红色')">
+    <input type="button" value="点击获取我喜欢的水果" onclick="fruit('香蕉','黄色')">
+    <input type="button" value="点击获取我喜欢的水果" onclick="fruit('葡萄','紫色')">
+    <input type="button" value="点击获取我喜欢的水果" onclick="fruit('橘子','橙色')"><br><br>
+    请输入你的名字:<input type="text" id="username">
+    请输入你的年龄:<input type="text" id="age">
+    请选择国籍:
+        <select id="sel">
+           <option>请选择</option>
+           <option>四川</option>
+           <option>上海</option>
+           <option>北京</option>
+           <option>深圳</option>
+        </select>
+        <input type="button" value="点击获取用户信息" onclick="user('打篮球')">
+    <script>
+        function fruit(apple,red){
+          console.log('我喜欢的水果是'+red+"的"+apple);
+          info(apple);
+        }
+        //名字，年龄，籍贯，点击获取不同用户信息
+        function user(sport){ 
+            var username=document.getElementById('username').value;
+            info(username);   
+        }
+        //获取用户信息模块
+       function info(sport){
+           console.log(sport)       
+           var age=document.getElementById('age').value;
+           var sel=document.getElementById('sel').value;
+           console.log(sel);
+       }   
+    </script>
+</body>
+</html>

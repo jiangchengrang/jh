@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数作为参数传递,将函数作为返回值</title>
+</head>
+<body>
+    <script>
+        /*
+        函数作为参数传递
+        函数作为返回值
+        */
+        function add(func,num){
+            return func(num);
+        }
+        function add10(num){
+            return num+50;
+        }
+        function add20(num){
+            return num+50;
+        }    
+     console.log(add(add10,10))
+     console.log(add(add20,20))
+
+     //函数作为返回值
+     function sum(n,m){
+      var total=n+m;//70
+      // return othersum(total);//150
+      return function othersum(t){
+        return t+total;
+      }
+     }
+     //单独方法
+    //  function othersum(t){
+    //   return t+80;
+    //  }
+    console.log(sum(20,50)(50));   
+    </script>
+</body>
+</html>

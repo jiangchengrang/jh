@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>质数</title>
+</head>
+<body>
+    <script>
+        /*【程序2】 
+题目：判断101-200之间有多少个素数（质数），并输出所有素数。 
+1.程序分析：判断素数的方法：用一个数分别去除2到sqrt(这个数)，如果能被整除， 
+则表明此数不是素数，反之是素数。
+分析:1.素数 2.i%j==0 
+*/
+var count=0;
+  for(var i=101;i<=200;i++){
+      for(var j=2;j<i;j++){
+        if(i%j==0){
+            break;
+        }
+      }
+      if(i==j){
+          count++;
+          document.write(i+"<br>");
+      }
+  }
+  document.write("总共有"+count+"个");
+    </script>
+</body>
+</html>

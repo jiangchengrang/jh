@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组的方法</title>
+</head>
+<body>
+   <script>
+       var arr=['三国演义','红楼梦','水浒传','西游记'];
+       //index,删除几个，0表示不删除，添加新的
+       arr.splice(1,1,'张飞','刘备');
+       console.log(arr);
+       //数组末尾添加
+       arr.push('张建');
+       //删除数组末尾
+       arr.pop();
+       //删除数组最前面值
+       arr.shift();
+       //在数组最前面添加
+       arr.unshift('李东');
+       console.log(arr)
+
+       //map方法,运算完了，在组成新的数组
+       var arr1=[1,7,9];
+       //元素本身，下标，数组本身
+      var new_arr=arr1.map(function(ele,index,arr){
+          //console.log(arr)
+       // return  ele*3;,push返回的是长度
+        return  arr1.push(ele*index)
+       })
+       //console.log(arr1);
+      // console.log(new_arr);
+
+       //forEach遍历
+     arr1.forEach(function(ele,index,arr){
+      console.log(arr)
+     })
+
+   </script>  
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组的方法</title>
+</head>
+<body>
+   <script>
+       var arr=['王立','张建','杨天鹏'],arr1=['王旺','李杰','李东'];
+       //连接数组
+      var new_arr=arr.concat(arr1);
+      //数组合并成一个字符串
+       console.log(new_arr.join('-'));
+       console.log(arr.indexOf('张建'));
+       //ASSI 
+       var arr2=[99,88,122,50,25];
+       arr2.sort(function(a1,a2){
+          // console.log(a1)
+        //return反正结果
+        return a2-a1//降序
+        //return a1-a2; 升序
+       })
+      
+      
+
+
+   </script> 
+</body>
+</html>

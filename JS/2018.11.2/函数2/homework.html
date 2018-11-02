@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>逻辑题，算不重复的三位数</title>
+</head>
+<body>
+    <div id="box"></div>
+    <p></p>
+  <script>
+      /*题目：有1、2、3、4个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？ 
+      1.程序分析：可填在百位、十位、个位的数字都是1、2、3、4。组成所有的排列后再去   掉不满足条件的排列。
+      要求:用函数表达式实现。
+
+      分析:
+        百位不等于十位且不等于个位
+      */
+      var count=0;
+      var box=document.getElementById('box');
+       var res=function(s){
+         for(var i=1;i<s;i++){//百位
+             for(var j=1;j<s;j++){//十位
+                 for(var k=1;k<s;k++){//个位
+                    if(i!=j && i!=k && j!=k){//如果百位不等于十位且不等于个位
+                      count++;
+                      //console.log(i+''+j+''+k)
+                      box.innerHTML+=i+''+j+''+k+"\n"
+                    }
+                 }
+             }
+         }
+       }
+       res(6);
+      document.getElementsByTagName('p')[0].innerHTML='1，2，3，4，5总共组成'+count+'个不重复的三位数';
+  </script>  
+</body>
+</html>
