@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 构造函数创建对象</title>
+</head>
+<body>
+  <script>
+      /*
+       构造函数:刚好对象名与方法名同名时候，首字母大写.
+       特征:
+        1. var o=new Object();不需要new对象
+        2. 没有创建对象，所以this关键字
+        3. 没有创建对象，return省略
+      */
+      function Sunflower(position,price){
+          //属性
+          this.position=position;
+          this.price=price;
+          this.skill=['打游戏','敲代码','耍朋友']
+          //方法
+          this.show=function(){
+              this.price-=5;
+          },
+          this.showSkill=function(){
+              return this.skill[1];
+          }
+      }
+
+      var _class={
+          name:"开心果",
+          age:18
+      }
+
+      var sunflower1=new Sunflower(0,30);
+      var sunflower2=new Sunflower(_class,60);
+      console.log(sunflower1);
+      sunflower2.show();
+      console.log(sunflower2.position.name);
+      console.log(sunflower1.showSkill())
+  </script>  
+</body>
+</html>

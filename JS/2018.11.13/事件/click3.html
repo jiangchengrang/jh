@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件委托/事件代理</title>
+</head>
+<body>
+   <ul id="nav">
+       <li>HTML</li>
+       <li>css</li>
+       <li>js</li>
+   </ul> 
+   <ul id="new_nav">
+       
+   </ul>
+   <script>
+       //普通的方法
+      /*var li=document.getElementsByTagName('li');
+      for(var i=0;i<li.length;i++){
+          //li[i].index=i;
+          li[i].onclick=function(s){
+            return function(){
+               console.log(li[s].innerHTML);
+            }
+          }(i)
+      }*/
+
+    //事件代理
+    var nav=document.getElementById('nav');
+    nav.onclick=function(e){
+        var new_nav=document.getElementById('new_nav');
+        e=e || window.event;
+        //目标指向，并转换小写
+     var li=e.target.tagName.toLowerCase();
+     if(li=='li'){
+         //console.log(this)
+         console.log(e.target.style.color='red');
+         new_nav.appendChild(e.target);
+     }
+    }
+   </script>
+</body>
+</html>

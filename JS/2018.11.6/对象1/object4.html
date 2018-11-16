@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js 继承</title>
+</head>
+<body>
+   <script>
+       /*
+       继承:接口继承和实现继承(属性，方法)--原型链，构造函数
+       原型链:一个对象指向原型对象的指针，而原型内部又指向构造函数的指针，以此类推，层层嵌套.
+       优点:继承了父模板，继承原型对象
+       缺点:父给子传，不太复合语法规则
+       */
+       //爷爷
+       function People(name,house,height){
+        this.name=name;
+        this.house=house;
+        this.height=height;
+        this.createShow=function(){
+           return this.house-=5;
+        }
+       }
+       //爸爸
+       function Son(){
+           this.name='张建';
+           this.eye='大眼睛';
+       }
+       //孙子
+       function Grandson(){
+           this.name='张三丰'
+       }
+       //父类给字类添加属性，子类继承
+     People.prototype.id=1;
+    Son.prototype=new People('张..父',10,1.8);
+    var son=new Son();
+    Grandson.prototype=son;
+    var grandson=new Grandson();
+    //console.log(son.name);
+   // console.log(son.createShow());
+    console.log(grandson.id);
+   </script> 
+</body>
+</html> 

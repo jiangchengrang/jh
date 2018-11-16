@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日期对象(获取对象)</title>
+</head>
+<body>
+    <div id="date"></div>
+    <p id='yen'></p>  
+   <script>
+       //var date=new Date('11,8,2018');
+       //当前时间
+       var date=new Date();
+       //获取年份
+       var year=date.getFullYear();
+       //获取月份，月份从0开始
+       var month=date.getMonth();
+       //获取天数
+       var day=date.getDate();
+       //获取小时
+       var hour=date.getHours();
+      //获取分
+      var m=date.getMinutes();
+
+      var s=date.getSeconds();
+      //获取毫秒数
+      date.getMilliseconds();
+      //时间戳
+      console.log(date.getTime());
+      //2018/11/7 上午9:52:28 返回当地日期
+      console.log(date.toLocaleString());
+      //2018/11/7
+      console.log(date.toLocaleDateString());
+      //上午9:54:17
+      console.log(date.toLocaleTimeString());
+      //09:55:06 GMT+0800 (中国标准时间)
+      console.log(date.toTimeString())
+      document.getElementById('date').innerHTML='当前时间为'+year+'年'+(month+1)+"月"+day+"日"+hour+"点"+m+"分"+s+"秒";
+      var num=98882828288;
+      //98,882,828,288 数据格式化成货币
+      document.getElementById('yen').innerHTML='请付款:&yen;'+num.toLocaleString();
+   </script>  
+</body>
+</html>

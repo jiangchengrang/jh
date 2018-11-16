@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 基于对象(组合模式创建)</title>
+</head>
+<body>
+    <script>
+        /*组合模式:通过构造函数添加属性，原型对象添加方法*/
+        //构造函数添加属性
+         function Animal(name,length){
+            this.name=name;
+            this.length=length;
+         }
+
+        //原型对象添加方法
+         Animal.prototype.show=function(){
+            return this.length-=1;
+         }
+        var animal=new Animal('大龙',3);
+        console.log(animal.show());
+
+        //僵尸玩家，生命值，初始距离，方法生命值减少10
+    </script>
+</body>
+</html>

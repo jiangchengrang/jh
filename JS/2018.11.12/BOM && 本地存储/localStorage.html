@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>localStorage 本地存储</title>
+</head>
+<body>
+    <input type="button" value="设置本地存储" onclick="setlocal()">
+    <input type="button" value="获取本地存储" onclick="getlocal()">
+    <input type="button" value="删除本地存储" onclick="dellocal()">
+    <script>
+      /*
+        1.存储大批量的数据，存储本地硬盘
+        2.没有过期时间，除非人为删除
+        3.安全性不高
+        */
+      function setlocal(){
+          //key(键，值),value
+         window.localStorage.setItem('id','李东'); 
+      }
+      function getlocal(){
+          //获取key
+          console.log(window.localStorage.getItem('name'))
+      }
+      function dellocal(){
+          //删除指定key
+          //window.localStorage.removeItem('id');
+
+          //清除所有key
+          window.localStorage.clear();
+      }
+    </script> 
+</body>
+</html>

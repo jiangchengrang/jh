@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom操作表格</title>
+    <style>
+            table{
+                width: 500px;
+            }
+        </style>
+</head>
+<body>
+    <table id='mytable' border="1">
+            <tr>
+                 <th>书名</th>
+                 <th>价格</th>
+                 <th>数量</th>
+                 <th>操作</th>
+            </tr>
+            <tr>
+                 <td>平凡的世界</td>
+                 <td>&yen;19.99</td>
+                 <td>10</td>
+                 <td><input type="button" value="删除" onclick="del(this)"></td>
+            </tr>
+       </table>
+   <input type="button" value="添加" id="btn">
+   <script>
+       //添加
+       var mytable=document.getElementById('mytable');
+       var btn=document.getElementById('btn');
+       btn.onclick=function(){
+       var num=mytable.rows.length;
+       //动态添加row
+       var row=mytable.insertRow();
+       var cell=row.insertCell(0);
+       cell.innerHTML="从你的全世界路过";
+       var cell1=row.insertCell(1);
+       cell1.innerHTML="&yen;998";
+       var cell2=row.insertCell(2);
+       cell2.innerHTML=num;
+       var cell3=row.insertCell(3);
+       cell3.innerHTML="<input type=\"button\" value=\"删除\" onclick=\"del(this)\">";
+       }
+      //删除
+      function del(th){
+        var tr=th.parentNode.parentNode.rowIndex;
+        mytable.deleteRow(tr);
+      }
+   </script>  
+</body>
+</html>

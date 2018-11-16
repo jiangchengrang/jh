@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="添加cookie" onclick="setcookie()">
+    <input type="button" value="获取cookie" onclick="getcookie()">
+    <input type="button" value="设置过期时间" onclick="setTimeCookie()">
+    <input type="button" value="删除时间" onclick="delCookie()">
+    <script>
+        /*
+        会话:当浏览器进入到关闭直接.
+        1.cookie存储在本地浏览器cookie数据
+        2.存储小批量数据
+        3.手动设置过期时间
+        4.安全性不高
+        */
+        function setcookie(){
+            //存储数据
+            alert('ok')
+            document.cookie="users=lucy!lily";
+        }
+        //获取cookie
+        function getcookie(){
+            var cook=document.cookie.split('=')[1];
+           // var user=coo
+           console.log(cook.split('!'))
+        }
+        //设置过期时间
+        function setTimeCookie(){
+            var Days = 30;
+            var date=new Date();
+            date.setTime(date.getTime() + Days*24*60*60*1000);//一个月，设置时间
+            //设置过期时间
+            document.cookie="users=lucy!lily;expires="+date.toGMTString();
+        }
+        //删除cookie
+        function delCookie(){
+            var date=new Date();
+            //当前时间减1天，昨天
+            date.setTime(date.getTime() - 1*24*60*60*1000);
+            //设置过期时间
+            document.cookie="users=lucy!lily;expires="+date.toGMTString();
+        }
+
+    </script>
+</body>
+</html>

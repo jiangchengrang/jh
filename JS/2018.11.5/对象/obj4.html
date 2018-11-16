@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js 基于对象编程</title>
+</head>
+<body>
+    <input type="button" value="创建人对象" onclick="creat_person('lucy','timg.jpg')">
+    <img onclick="move_left()">
+    <script>
+     //new人类，传名字，图片，点击让图片移动10px
+     var person;
+     function creat_person(name,url){
+        person=obj_person(name,url);
+        document.getElementsByTagName('img')[0].src=person.url
+     }
+     function move_left(){
+        document.getElementsByTagName('img')[0].style.transform+="translate(10px)"
+     }
+     //创建对象的属性和方法
+     function obj_person(name,url){
+        var new_per={
+            name:name,
+            url:url
+        }
+        return new_per;
+     }
+    </script>
+</body>
+</html>

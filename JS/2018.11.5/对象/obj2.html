@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建对象 ---对象字面量</title>
+</head>
+<body>
+  <script>
+      //对象字面量
+      var dog={
+          name:'旺财',
+          color:'白色',
+          type:'泰迪'
+      }
+      //方法
+      dog.show=test;
+      
+      function test(){
+        alert('小狗的名字:'+this.name)
+      }
+      dog.show();
+     
+  </script>
+</body>
+</html>

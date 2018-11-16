@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日期对象（设置对象）</title>
+</head>
+<body>
+    <script>
+        var date=new Date();
+        //设置年份
+        date.setFullYear('2000');
+        //获取年份
+        console.log(date.getFullYear());
+        date.setHours('11');
+        console.log(date.getHours());
+        //转换成时间戳
+        console.log(Date.parse(new Date()));
+    </script>
+</body>
+</html>

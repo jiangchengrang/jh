@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业三</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 102px;
+            height: auto;
+            margin: 0 auto;
+        }
+        .box li{
+            display: block;
+            list-style: none;
+            width: 100px;
+            height: 90px;
+            border: 1px solid #000;
+            border-bottom: 0;
+            text-align: center;
+            position: relative;
+        }
+        li>img{
+            width: 100%;
+            height: 100%;
+        }
+        .box li:last-child{
+            border-bottom: 1px solid #000;
+        }
+        .dis{
+            width: 210px;
+            height: 210px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            border: 1px solid blue;
+            display: none;
+        }
+        .dis img{
+            width: 210px;
+            height: 210px;
+            /*display: block;*/
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>
+            <img src="img/small_1.jpg" alt="">
+            <div class="dis"><img src="img/big_1.jpg" alt="" ></div>
+        </li>
+        <li>
+            <img src="img/small_2.jpg" alt="">
+            <div class="dis"><img src="img/big_2.jpg" alt="" ></div>
+        </li>
+        <li>
+            <img src="img/small_3.jpg" alt="">
+            <div class="dis"><img src="img/big_3.jpg" alt="" ></div>
+        </li>
+        <li>
+            <img src="img/small_4.jpg" alt="">
+            <div class="dis"><img src="img/big_4.jpg" alt="" ></div>
+        </li>
+        <li>
+            <img src="img/small_5.jpg" alt="">
+            <div class="dis"><img src="img/big_5.jpg" alt="" ></div>
+        </li>
+    </ul>
+    <script>
+        var box=document.getElementsByClassName('box');
+        box[0].onmouseover=function(e){
+            e=e||window.event;
+            var img=e.target.tagName.toLowerCase();
+            if (img=='img'){
+                var imgBig=e.target.nextElementSibling;
+                imgBig.classList.add('show');
+            }
+        };
+        box[0].onmouseout=function(e){
+            e=e||window.event;
+            var img=e.target.tagName.toLowerCase();
+            if (img=='img'){
+                var imgBig=e.target.nextElementSibling;
+                imgBig.classList.remove('show');
+            }
+        };
+        
+        //移动到区域内
+        box[0].onmousemove=function (e) {
+            e=e||window.event;
+            console.log(e.clientX)
+            var img=e.target.tagName.toLowerCase();
+            if (img=='img'){
+                //减去li距离浏览器上面和左边的距离
+                var top=e.clientY-e.target.parentElement.offsetTop;
+                var left=e.clientX-e.target.parentElement.offsetLeft;
+                var imgBig=e.target.nextElementSibling;
+                imgBig.style.top=top+'px';
+                imgBig.style.left=left+'px';
+            }
+        }
+    </script>
+</body>
+</html>

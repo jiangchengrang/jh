@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>keydown 键盘事件</title>
+</head>
+<body>
+onkeydown:<input type="text" id="text" placeholder="请输入键盘上key">
+onkeyup：<input type="text" id="up" placeholder="请输入键盘上key">
+onkeypress:<input type="text" id="press" placeholder="请输入键盘上key">
+  <script>
+      /*
+      onkeydown：键盘按下去时候触发，（键盘上的任意键）
+      e.keyCode：指定。。。键触发（ASCII）
+      e.keyCode==37 && e.altKey:组合键触发
+      onkeyup:键盘按下去回弹那一刻触发
+      onkeypress：键盘按下去时候触发，(键盘上功能不能触发)
+      */
+      var text=document.getElementById('text');
+      text.onkeydown=function(e){
+          //指定精准键触发
+        /*if(e.keyCode==13){
+            console.log('回车键被触发')
+        }else{
+            console.log('请输入指定键触发')
+        }*/
+
+        //shift+回车
+        if(e.keyCode==37 && e.altKey){
+           console.log('组合键被触发')
+        }
+      }
+      //onkeyup:键盘按下去回弹那一刻触发
+      var up=document.getElementById('up');
+      up.onkeyup=function(e){
+        console.log(e.keyCode)
+      }
+      //
+      var press=document.getElementById('press');
+      press.onkeypress=function(e){
+       console.log(e.keyCode);
+      }
+
+      console.log(window.location)
+  </script> 
+</body>
+</html>

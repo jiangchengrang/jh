@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 基于对象编程</title>
+</head>
+<body>
+   <script>
+       var obj={
+           arr:['张','王','杜'],
+           class:{
+               name:'lucy',
+               age:18
+           },
+           show:function(){
+            return this.arr[0];
+           }
+       }
+       console.log(obj.arr.push('赵'));
+       console.log(obj.arr);
+       console.log(obj.class.name='lily');
+       console.log(obj);
+       console.log(obj.show());
+   </script> 
+</body>
+</html>

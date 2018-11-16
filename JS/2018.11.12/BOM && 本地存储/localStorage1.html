@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>localStorage 和 sessionStorage</title>
+</head>
+<body>
+    <script>
+        document.write('总访问:');
+        if(window.localStorage.pagecount){
+            window.localStorage.pagecount=parseInt(window.localStorage.pagecount)+1
+        }else{
+            window.localStorage.pagecount=1;
+        }
+        document.write('总访问:'+window.localStorage.pagecount+"<br>");
+
+        document.write('当前访问量:');
+        if(window.sessionStorage.pagecount){
+            window.sessionStorage.pagecount=parseInt(window.sessionStorage.pagecount)+1
+        }else{
+            window.sessionStorage.pagecount=1;
+        }
+        document.write('当前访问量:'+window.sessionStorage.pagecount);
+    </script>
+</body>
+</html>

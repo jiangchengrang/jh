@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式创建方式</title>
+</head>
+<body>
+  <script>
+      /*
+       普通方式的创建:var reg=/word/i;
+       test(str):验证(true or false)
+       i:不区分大小写
+       g:匹配多个
+      */
+      //定义字符串
+    var str='hello Word Word Word!!!'
+    //正则
+    var reg=/word/i;
+    if(reg.test(str)){
+        console.log('匹配到');
+    }
+    //正则实现批量替换
+    console.log( str.replace(/word/gi,'dog'));
+    console.log(str);
+     
+     var arr=['lucy','LUCY','LILY','LUCY'];
+   // console.log(/lily/gi,arr.join(''))
+   console.log(arr.join('').replace(/lucy/gi,'lily'));
+    
+    //构造方式
+    var str1="I love love love love "
+    var regexp=new RegExp('LOVE','gi');
+   console.log(str1.replace(regexp,'like'));
+  </script>   
+</body>
+</html>

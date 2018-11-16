@@ -1,0 +1,13 @@
+{
+    "user":[
+        {"name":"张建","age":22,"url":"https://goss3.veer.com/creative/vcg/veer/612/veer-303692287.jpg"},
+        {"name":"李东","age":35,"url":"https://goss.veer.com/creative/vcg/veer/612/veer-167422727.jpg"},
+        {"name":"李滔","age":23,"url":"https://goss3.veer.com/creative/vcg/veer/612/veer-153144519.jpg"},
+        {"name":"张","age":26,"url":"https://goss3.veer.com/creative/vcg/veer/612/veer-146081820.jpg"}
+    ],
+    "lazyimg":[
+        {"name":"自然堂喜马拉雅沁润补水面膜贴28片 护肤品套装礼盒（男女士面膜护肤保湿）","price":"99","pic":"https://img13.360buyimg.com/mobilecms/s280x280_jfs/t29722/151/63874698/195919/84938e6a/5be69fe2Nbbefe7a7.jpg!q90.webp"},
+        {"name":"MG美即面膜 牛奶臻萃细?","price":"199","pic":"https://img12.360buyimg.com/mobilecms/s280x280_jfs/t26794/241/1483384881/148703/7b74bc03/5be40ba1N219a9284.jpg!q90.webp"},
+        {"name":"南极人（Nanjiren）马丁男皮鞋英伦休闲 时尚百搭工装低帮户外男靴子 N7CY7810 浅棕 42","price":"999","pic":"https://img20.360buyimg.com/mobilecms/s280x280_jfs/t24592/298/2404465680/160226/ab2387e6/5be52561Nba77f0e6.jpg!q90.webp"}
+    ]
+}

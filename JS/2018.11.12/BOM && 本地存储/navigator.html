@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>navigator对象 ,location对象</title>
+</head>
+<body>
+   <input type="button" value="设置url" id="btn">
+   <input type="button" value="前进" id="go">
+   <a href="history.html">链接到历史记录</a>
+   <script>
+       //返回浏览器相关信息
+       console.log(window.navigator.userAgent);
+       //获取浏览器的url
+       console.log(window.location);
+       //哈希值(hash)
+      // window.location.hash="#9999";
+       console.log(window.location.href)
+       var btn=document.getElementById('btn');
+       btn.onclick=function(){
+         console.log(window.location.pathname)
+       }
+       //前进
+       var go=document.getElementById('go');
+       go.onclick=function(){
+           //go(1) 和 forward() 全等
+           window.history.forward();
+       }
+   </script> 
+</body>
+</html>

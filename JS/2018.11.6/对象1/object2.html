@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 基于对象原型对象(prototype)</title>
+</head>
+<body>
+    <script>
+       /*
+        JavaScript中的每一函数，都有一个prototype属性，该属性指向一个对象，我们称之为原型对象
+       */ 
+       //空的构造函数
+        function Animal(){
+
+        }
+        //通过原型对象添加属性
+        Animal.prototype.name='猪宝宝';
+        Animal.prototype.color='白色';
+
+        Animal.prototype={
+            name:"羊宝宝",
+            color:'彩虹色',
+            showAnimal:function(){
+                return 10
+            }
+        }
+        //原型对象添加方法
+        Animal.prototype.add=function(){
+            return 50;
+        }
+      var animal=new Animal();
+      console.log(animal.add());
+      
+    </script>
+</body>
+</html>

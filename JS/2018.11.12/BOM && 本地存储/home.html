@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>home</title>
+</head>
+<body>
+    <a href="#"><img src="image/1.jpg" id="11"></a>
+    <a href="#"> <img src="image/2.jpg" id="22"></a>
+    <script>
+        var image=document.getElementsByTagName('img');
+        var a=document.getElementsByTagName('a');
+        for(var i=0;i<image.length;i++){
+            image[i].onclick=function(s){
+               return function(){
+                   var id=image[s].getAttribute('id');
+                  var setId=window.sessionStorage.setItem('id',id);
+                  var getId=window.sessionStorage.getItem('id');
+                  a[s].setAttribute('href',"index.html?"+getId);
+               }
+            }(i)
+        }
+    </script>
+</body>
+</html>

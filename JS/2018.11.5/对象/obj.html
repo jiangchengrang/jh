@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 基于对象编程</title>
+</head>
+<body>
+    <script>
+        /*
+        对象:客观存在的人，事，物体等实体,万物皆对象。
+        外貌(属性):                   行为(方法):
+        人:性别，身高，眼睛....      敲代码,吃...，打游戏
+        车:颜色，型号..             加速，暂停，赛跑...
+        面向对象:封装，继承，多态
+        var arr=new Array();
+        var fun=new Function('return 1');
+        var data=new Date();
+        console.log(Object.prototype.toString.call(obj)):返回精准对象类型
+        */
+        //创建对象
+        var person=new Object();
+        //添加属性
+        person.name='lucy';
+        person.age=20;
+        person.sex='女';
+        //方法
+        person.show=function(){
+            alert('我女朋友的名字叫'+this.name);//this自己person
+        }
+        person.per=function(){
+            alert('我女朋友的年龄叫'+this.age);
+        }
+        person.show();
+        person.per();
+        console.log(person)
+    </script>
+</body>
+</html>

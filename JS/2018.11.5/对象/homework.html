@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>去重复</title>
+</head>
+<body>
+   <script>
+       //for循环[i]跟for循环[i+1]比较，如果有相同删除
+       //indexof 和lastindexof
+       var arr=[1,3,5,7,9,1,5];
+       function newArr(arr){
+        for(var i=0;i<arr.length;i++){
+          for(var j=i+1;j<arr.length;j++){
+              if(arr[i]==arr[j]){
+                  arr.splice(j,1);
+              }
+          }
+        }
+        return arr;
+       }
+     var _newarr=newArr(arr);
+    console.log(_newarr)
+    
+     //方法2 indexof
+     function newArr1(arr){
+       for(var i=0;i<arr.length;i++){
+           if(arr.indexOf(arr[i])!=arr.lastIndexOf(arr[i])){
+              arr.splice(i,1);
+           }
+       }
+       return arr;
+     }
+  var arr_=newArr1(arr);
+  console.log(arr_);
+   </script> 
+</body>
+</html>

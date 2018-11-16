@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>window</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body style="width: 3000px;height: 2000px;" onscroll="go()">
+    <a href="#" target="_"></a>
+    <input type="button" value="打开" onclick="open1()">
+    <input type="button" value="关闭" onclick="close1()">
+    <input type="button" value="移动" onclick="move1()">
+
+   <script>
+       function test(){
+           //alert('ok');
+       }
+      window.test();
+
+      function open1(){
+          //打开新窗口
+         mywindow= window.open('https://www.baidu.com','_blank',"width=400,height=400")
+      }
+      function close1(){
+       //关闭
+        mywindow.close();
+      }
+      //移动
+    //   function move1(){
+    //       alert('ok')
+    //     mywindow.moveTo(500,500);
+    //     mywindow.resizeTo(300,200);
+    //   }
+    //屏幕缩放，可视区的宽高
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+    //浏览器窗口的实际宽度（包括浏览器菜单和边框）
+    console.log(window.outerWidth);
+    console.log(window.outerHeight);//16
+    
+    //console.log(window.pageYOffset);
+    
+    function go(){
+        //浏览器窗口水平滚动距离
+        console.log(window.pageXOffset);
+        //浏览器垂直滚动距离
+        //console.log(window.pageYOffset);
+    }
+   </script> 
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 操作节点(替换节点)</title>
+</head>
+<body>
+   <div id="box">我是div</div>
+   <input type="button" value="替换节点" id="btn">
+   <div id="content">内容标签</div>
+    <script>
+        //创建P,替换div
+        var btn=document.getElementById('btn');
+        btn.onclick=function(){
+         var p=document.createElement('p');
+         p.innerHTML='我是带替换p标签';
+         p.setAttribute('class','text');
+         document.body.appendChild(p);
+         var box=document.getElementById('box');
+         //替换节点：box.replaceChild(new,old);
+         document.body.replaceChild(p,box)
+        }
+        var content=document.getElementById('content');
+        //删除节点
+        document.body.removeChild(content);
+        //获取当前的标签名
+        console.log(btn.tagName.toLowerCase())
+    </script>
+</body>
+</html>

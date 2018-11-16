@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>onmouseover 和 onmouseenter区别</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+
+        }
+        .nav{
+            width: 200px;
+            height: 200px;
+            border: 1px solid blueviolet;
+            margin: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        外容器
+        <div class="nav">内部容器</div>
+    </div>
+    <script>
+        var box=document.getElementById('box');
+        var nav=document.getElementsByClassName('nav')[0];
+        box.onmouseover=function(){
+            console.log('onmouseover悬浮外部容器')
+        }
+        box.onmouseout=function(){
+            console.log('onmouseout离开外部容器')
+        }
+        nav.onmouseover=function(){
+            console.log('onmouseover悬浮内部容器')
+        }
+        nav.onmouseout=function(){
+            console.log('onmouseout离开内部容器')
+        }
+        //悬浮到内容上
+        box.onmouseenter=function(){
+            console.log('onmouseenter悬浮外部容器')
+        }
+        box.onmouseleave=function(){
+            console.log('onmouseleave离开外部容器')
+        }
+        nav.onmouseenter=function(){
+            console.log('onmouseenter悬浮内部容器')
+        }
+        nav.onmouseleave=function(){
+            console.log('onmouseleave离开内部容器')
+        }
+    </script>
+</body>
+</html>

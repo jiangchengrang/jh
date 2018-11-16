@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抢红包</title>
+</head>
+<body>
+    <h2>抢红包</h2>
+	<div>当前红包个数：
+		<span id="restCounter"></span>
+	</div>
+	<div>当前红包金额：
+		<span id="restMoney"></span>
+	</div>
+	总金额：<input type="text" placeholder="请输入红包的总金额" id="totMoney">
+	红包个数：<input type="text" placeholder="请输入红包个数" id="totCounter" 
+	><span id="warn"></span>
+	<br>
+	<input type="button" value="塞钱进红包" id="btnPut">
+	<input type="button" value="抢红包" id="btnGet" disabled="disabled">
+	<br>
+	<div id="viewer">
+    </div>
+    <script>
+        /*
+         1.如果生成是0,至少给1分钱
+         2.随机生成的算法(剩下的钱的平均数*2)*随机生成
+         3.红包个数的--，红包金额的减少
+         4.最后剩下的下，全部给最后一个人
+         5.手气王
+         var arr=[3,6,100,4]
+         console.log( Math.min.apply(null,arr));//数组中的最大/最小
+        */
+       //发红包
+       var restCounter=dom('restCounter'),restMoney=dom('restMoney');
+        dom('btnPut').onclick=function(){
+            var totMoney=dom('totMoney').value;
+            var totCounter=dom('totCounter').value;
+            restCounter.innerHTML=parseInt(totCounter);
+            restMoney.innerHTML=parseFloat(totMoney).toFixed(2);
+            dom('btnGet').removeAttribute('disabled');
+            dom('btnPut').setAttribute('disabled','disabled')
+        }
+        //抢红包
+       dom('btnGet').onclick=function(){
+        restCounter=restCounter.innerHTML;
+        //没有钱
+         if(restCounter<=0){
+             alert('少年下次早点来，红包已经被抢完');
+             return false;
+         }else if(restCounter>0){
+           //随机生成红包并赋值,随机生成为0，至少给1分钱
+           restCounter--;
+         }else if(restCounter==1){
+             //最后一个红包，剩下的钱给最后一个人
+         }
+         
+       }
+       //获取对象的方法
+       function dom(d){
+           return document.getElementById(d);
+       }
+    </script>
+</body>
+</html>

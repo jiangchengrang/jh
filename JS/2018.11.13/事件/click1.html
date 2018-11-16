@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件冒泡，事件捕捉</title>
+    <style>
+            #box{
+                width: 400px;
+                height: 400px;
+                border: 1px solid red;
+            }
+            #text{
+                width: 200px;
+                height: 200px;
+                border: 1px solid blue;
+            }
+   </style>
+</head>
+<body>
+  <div id="box">
+     我是div
+     <p id="text">我是P标签</p>
+  </div>
+   <script>
+       /*
+        事件冒泡:标签嵌套，分别都做事件监听，事件第三个参数设置为false，会由下往上执行过程，p-div-body-document-window;
+        事件捕捉:标签嵌套，分别都做事件监听，事件第三个参数设置为true，会由上往下执行过程，window-document-body-div-p;
+       */
+        //事件监听
+        var box=document.getElementById('box');
+        var p=document.getElementById('text');
+        var body=document.getElementsByTagName('body');
+        //body事件监听
+        body[0].addEventListener('click',function(){
+            alert('我是body被触发了')
+        },false);
+        //box事件监听
+        box.addEventListener('click',function(){
+            alert('我是div被触发了')
+        },false);
+        //p事件监听
+        p.addEventListener('click',function(){
+            alert('我是p被触发了')
+        },false);
+
+        //阻止事件冒泡
+        box.addEventListener('click',function(e){
+            //阻止事件冒泡
+          //e.stopPropagation();
+          //取消事件冒泡
+          e.cancelBubble=true;
+        })
+        p.addEventListener('click',function(e){
+          //e.stopPropagation();
+          //取消事件冒泡
+          e.cancelBubble=true;
+        })
+   </script>
+</body>
+</html>

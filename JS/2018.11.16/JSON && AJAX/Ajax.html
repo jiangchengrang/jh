@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax 请求数据</title>
+</head>
+
+<body>
+    <div id="nav">
+        <!-- <div class="box">
+                    <p>名字为:</p> 
+                    <p>年龄为:</p>
+                    <p>喜欢美食:<img src="https://goss3.veer.com/creative/vcg/veer/612/veer-303692287.jpg"></p>
+                </div> -->
+    </div>
+    <script>
+        /*
+        AJAX 是一种用于创建快速动态网页的技术
+        AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。
+        AJAX 最大特征实现局部刷新和异步调用
+        AJAX基于服务(本地服务)
+        AJAX请求响应过程:
+          1.创建对象XMLHttpRequest
+          2.发送请求open('GET/POST',url,true/false);请求方式，请求url,同步或者异步
+          3.响应事件onreadystatechange
+          4.响应状态readyState 和 status
+            4.1.readyState
+              存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+              0: 请求未初始化
+              1: 服务器连接已建立
+              2: 请求已接收
+              3: 请求处理中
+              4: 请求已完成，且响应已就绪
+            4.2 status
+               200: "OK"
+               404: 未找到页面
+          5.响应数据
+          6.拼接数据
+        */
+        //接收创建对象变量
+        var xmlhttp;
+        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {// code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //请求方式，请求url(后端接口，api),同步或者异步
+        xmlhttp.open("POST", "json/shopping.json", true);
+        //POST方法，string()类型向服务器发送请求
+        xmlhttp.send();
+        //响应事件
+        xmlhttp.onreadystatechange = function () {
+            //响应状态
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                //获取数据，并将其转换成object
+                var obj = JSON.parse(xmlhttp.responseText)
+                nav_str(obj);
+                pround(obj);
+            }
+        }
+        //动态拼接数据
+        function nav_str(obj) {
+            var str = "";
+            for (var i = 0; i < obj.user.length; i++) {
+                str += `
+            <div class="box">
+                    <p>名字为:${obj.user[i].name}</p> 
+                    <p>年龄为:${obj.user[i].age}</p>
+                    <p>喜欢美食:<img src="${obj.user[i].url}"></p>
+            </div>
+            `
+            }
+            document.getElementById('nav').innerHTML = str;
+        }
+        //动态拼接第二段数据
+        function pround(obj) {
+            console.log(obj.lazyimg)
+        }
+    </script>
+</body>
+
+</html>

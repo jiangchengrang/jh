@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业二</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: auto;
+            width: auto;
+            margin: 10px 10px 0 10px;
+        }
+        .top{
+            height: 262px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        .bot{
+            height: 48px;
+            width: 100%;
+            margin-top: 0;
+            border: 1px solid #000;
+            border-top: 0;
+        }
+        .bot li{
+            display: block;
+            list-style: none;
+            width: 20%;
+            float: left;
+            text-align: center;
+            position: relative;
+            /*border-right: 1px solid #000;*/
+        }
+        .bot li:after{
+            content: '';
+            width: 1px;
+            height: 48px;
+            display: block;
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .imgBor{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top"><img src="img/show1_big.jpg" alt="" id="big"></div>
+        <ul class="bot">
+            <li><img src="img/show1.jpg" alt="" onmouseover="show(this,'1')" onmouseout="hide(this)"></li>
+            <li><img src="img/show2.jpg" alt="" onmouseover="show(this,'2')" onmouseout="hide(this)"></li>
+            <li><img src="img/show3.jpg" alt="" onmouseover="show(this,'3')" onmouseout="hide(this)"></li>
+            <li><img src="img/show4.jpg" alt="" onmouseover="show(this,'4')" onmouseout="hide(this)"></li>
+            <li><img src="img/show5.jpg" alt="" onmouseover="show(this,'5')" onmouseout="hide(this)"></li>
+        </ul>
+    </div>
+    <script>
+        //切换显示图片
+        function show(th,num){
+            console.log(th)
+            th.style.border='1px solid red';
+            document.getElementById('big').src="img/show"+num+"_big.jpg"
+        }
+        //隐藏
+        
+        function hide(th){
+            th.style.border='';
+        }
+    </script>
+</body>
+</html>

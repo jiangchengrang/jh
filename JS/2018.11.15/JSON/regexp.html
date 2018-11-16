@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则方法</title>
+</head>
+<body>
+    <select id="friut" onchange="change()">
+        <option>请选择</option>
+        <option>苹果</option>
+        <option>香蕉</option>
+    </select>
+    <select id="selProvince" onchange="prevince()">
+        <option>请选择</option>
+        <option>四川省</option>
+        <option>重庆市</option>
+        <option>安徽</option>
+    </select>
+    <select id="city" >
+    </select>
+   <script>
+       var str="hello word!!";
+       //检索，检索到返回位置，反之-1
+     console.log(str.search(/WORD/gi));
+     //exec检测，如果匹配到以数组形式返回结果，没有匹配返回null  
+    console.log(/o/gi.exec(str));
+    
+    function change(){
+        //下拉索引
+        var friut=document.getElementById('friut').selectedIndex;
+        console.log(friut);
+    }
+    //省市联动
+    function prevince(){
+        var selProvince=document.getElementById('selProvince').value;
+        var city=document.getElementById('city');
+        //每次给清空
+        city.options.length=0
+        switch (selProvince) {
+            case "四川省":
+                city.add(new Option("成都市","成都市1"));//new option标签，添加key,value
+                city.add(new Option("绵阳","绵阳1"));//new option标签，添加key,value
+                city.add(new Option("广元市","广元1"));//new option标签，添加key,value
+                break;
+            case "重庆市":
+               city.add(new Option("万州","万州1"));//new option标签，添加key,value
+            default:
+                break;
+        }
+    }
+
+   </script> 
+</body>
+</html>

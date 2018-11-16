@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom 操作节点</title>
+</head>
+<body>
+    <ul id='roleOld'>
+        <li>曹操</li>
+        <li>曹操</li>
+    </ul>
+    <ul id="roleNew">
+        <li>项羽</li>
+        <li>诸葛亮</li>
+    </ul>
+    <input type="button" id="btn" value="添加角色">
+    <script>
+        var btn=document.getElementById('btn');
+        btn.onclick=function(){
+          var roleOld=document.getElementById('roleOld'),
+           roleNew=document.getElementById('roleNew');
+           if(roleNew.childElementCount){
+               //老的角色添加第一个新角色
+             roleOld.appendChild(roleNew.lastElementChild)
+           }else{
+               alert('英雄都派出去杀敌!!')
+           }
+        //    var li=document.createElement('li');
+        //    li.innerHTML='神女';
+        //    roleNew.appendChild(li);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js 基于对象编程的封装不同</title>
+</head>
+<body>
+ <input type="button" value="创建小狗的特征" onclick="creatAnimal('哈士奇','黑白',1)" >
+ <input type="button" value="显示小狗的特征" onclick="show_dog()">
+ <input type="button" value="创建熊猫的特征" onclick="creatAnimal('大熊猫','黑',1.5)">
+ <input type="button" value="显示熊猫的特征" onclick="show_dog()">   
+ <input type="button" value="创建长颈鹿的特征" onclick="creatAnimal('长颈鹿','黄色',3)">
+ <input type="button" value="显示长颈鹿的特征" onclick="show_dog()">
+ <script>
+     //动物类
+   var animal;
+   function creatAnimal(name,color,height){
+    animal=objAnimal(name,color,height);
+     alert('创建成功');
+    //console.log(animal);
+    console.log(animal);
+   }
+   function show_dog(){
+    animal.show();
+    animal.show1();
+   }
+
+   //创建动物类
+    function objAnimal(name,color,height){
+        /*var _newAnimal=new Object();
+        //创建属性
+        _newAnimal.name=name;
+        _newAnimal.color=color;
+        _newAnimal.height=height;*/
+        //对象字面量
+        var _newAnimal={
+            name:name,
+            color:color,
+            height:height
+        }
+        _newAnimal.show=function(){
+            alert('我喜欢的动物的名字:\n'+this.name+"\n身高为:"+this.height);
+        }
+        _newAnimal.show1=function(){
+            alert('我喜欢的动物的颜色'+this.color);
+        }
+        return _newAnimal;
+    }
+  
+ </script>
+</body>
+</html>

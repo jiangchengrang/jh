@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建文本节点</title>
+</head>
+<body>
+    <script>
+        //创建table节点
+        var table=document.createElement('table');
+        //在body追加table
+        document.body.appendChild(table);
+        for(var i=1;i<=9;i++){
+            //创建tr
+            var tr=document.createElement('tr');
+            table.appendChild(tr);
+            for(var j=1;j<=i;j++){
+                var td=document.createElement('td');
+                tr.appendChild(td);
+                //创建文本节点
+                var text=document.createTextNode(i+"*"+j+"="+i*j);
+                //td追加文本节点
+                td.appendChild(text);
+            }
+        }
+    </script>
+</body>
+</html>

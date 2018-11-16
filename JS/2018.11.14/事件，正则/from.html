@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单事件,窗口，焦点</title>
+    <style>
+        input{
+            outline: none
+        }
+    </style>
+</head>
+<body onresize="size()">
+   <form action="keydown.html?id=5 && name='lucy'" method="POST" onsubmit="go()">
+    请输入你的名字:<input type="text" placeholder="请输入你名字" onselect="check1()">
+    <h1>选择科目</h1>
+    <select id="sel" onchange="sel1(this)">
+        <option>请选择</option>
+        <option>html</option>
+        <option>css</option>
+        <option>js</option>
+    </select>
+  获取焦点 :<input type="text" placeholder="请将你光标放入文本框" id="focus">
+    <input type="submit" value="提交" >
+   </form> 
+   <script>
+     function  go(){
+       console.log('走你')
+       }
+       //onselect:选中事件
+    function check1(){
+        console.log('请选中触发')
+    } 
+    //onchange:选择列表项触发
+    function sel1(th){
+        //console.log('选择科目')
+        console.log(th.value)
+    }
+    //onresize：变窗口大小时候触发
+    function size(){
+     var width=window.innerWidth;
+     if(width<=600){
+         console.log('当前不支持'+width+'像素的宽')
+     }
+    }
+    //获取焦点
+    var focus=document.getElementById('focus');
+    focus.onfocus=function(){
+        this.style.border='1px solid red';
+    }  
+   </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>查找节点</title>
+</head>
+<body>
+    <p>我是上一个兄弟</p>
+    <div id="content">
+        <p>曹操</p>
+        <p>项羽</p>
+        <p>诸葛亮</p>
+    </div>
+    <main id="main">
+        <p>刘思思</p>
+        <p>赵雅芝</p>
+        <p>彭于晏</p>
+    </main>
+    
+    <footer>
+        <ul>
+            <li class="subject">语文</li>
+            <li>数学</li>
+            <li>英语</li>
+        </ul>
+    </footer>
+     
+    <script>
+        /*
+        firstChild:找到第一个（空的文本节点算）
+        firstElementChild:找到第一个
+        nextSibling:相邻下一个兄弟节点（空的文本节点算）
+        nextElementSibling:相邻下一个兄弟
+        lastChild:找到最后一个（空的文本节点算）
+        lastElementChild:找到最后一个
+        previousSibling:相邻的上一个兄弟（空的文本节点算）
+        previousElementSibling:相邻的上一个兄弟.
+
+        parentNode/parentElement:找父节点
+        children:子节点(返回的集合)
+        childElementCount:节点个数
+        */
+        //兄弟节点
+        var content=document.getElementById('content');
+        content.firstChild.nextSibling.nextSibling.nextSibling.style.color='red'
+        content.lastChild.previousSibling.previousSibling.previousSibling;
+        //console.log(content.previousElementSibling);
+
+       //父节点
+       var subject=document.getElementsByClassName('subject')[0];
+       subject.parentNode.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.style.color='blue';
+
+       var body=document.getElementsByTagName('body')[0];
+       console.log(body.lastChild.previousElementSibling.firstChild.nextElementSibling.firstChild.nextElementSibling)
+       
+       console.log(subject.parentElement.parentElement);
+
+       //子节点
+      var main=document.getElementById('main');
+       main.childElementCount
+       main.children
+    </script>
+</body>
+</html>

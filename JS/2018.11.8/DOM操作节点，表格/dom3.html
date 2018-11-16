@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom 操作节点(克隆节点)</title>
+</head>
+<body>
+    <div id="box">我是需要复制的内容</div>
+    <input type="button" value="复制" id="copy">
+    <p>复制1</p>
+    <p>复制2</p>
+    <p>复制3</p>
+    <p>复制4</p>
+    <div id="content">
+
+    </div>
+    <script>
+        var copy=document.getElementById('copy');
+        copy.onclick=function(){
+            var box=document.getElementById('box');
+            //cloneNode(true/fasle)克隆:true允许克隆（标签，内容，属性）,false:克隆标签和属性...
+            var new_box=box.cloneNode(false);
+            document.body.appendChild(new_box);
+        }
+        //对点击的克隆...追加到content
+       var p=document.getElementsByTagName('p');
+       for(var i=0;i<p.length;i++){
+           p[i].onclick=function(s){
+               return function(){
+               document.getElementById('content').appendChild(p[s].cloneNode(true));
+               }
+           }(i)
+       }
+    </script>
+</body>
+</html>

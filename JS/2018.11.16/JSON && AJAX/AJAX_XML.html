@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX XML</title>
+</head>
+<body>
+    <SCript>
+        var xmlhttp;
+        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {// code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //请求方式，请求url(后端接口，api),同步或者异步
+        xmlhttp.open("GET", "xml.xml", true);
+        //POST方法，string()类型向服务器发送请求
+        xmlhttp.send();
+        //响应事件
+        xmlhttp.onreadystatechange = function () {
+            //响应状态
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+              var xml=xmlhttp.responseXML;
+              console.log(xml.getElementsByTagName("bookstore")[0])
+  
+            }
+        }
+    </SCript>
+</body>
+</html>

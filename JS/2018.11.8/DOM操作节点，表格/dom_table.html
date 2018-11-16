@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom 操作表格</title>
+    <style>
+        table{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <table id='mytable' border="1">
+        <tr>
+            <th>书名</th>
+            <th>价格</th>
+        </tr>
+        <tr>
+            <td>平凡的世界</td>
+            <td>&yen;19.99</td>
+        </tr>
+    </table>
+    <input type="button" value="添加" id="btn">
+    <input type="button" value="删出行" id="del" onclick="del()">
+    <script>
+     var mytable=document.getElementById('mytable');
+     var btn=document.getElementById('btn');
+     btn.onclick=function(){
+         //添加tr
+        var tr=mytable.insertRow();
+        //添加td
+        var cell=tr.insertCell(0);
+        cell.innerHTML="从你的全世界路过";
+        cell.align='center';
+        cell.style.color='red';
+        cell.style.background='yellow';
+        var cell1=tr.insertCell(1);
+        cell1.innerHTML='&yen;998'
+     }
+     //返回表格中行的集合
+     console.log(mytable.rows);
+     //删出行
+     function del(){
+        var mytable=document.getElementById('mytable');
+        //返回行的位置
+       //console.log(mytable.rows[1].rowIndex);
+       //console.log(mytable.rows.length);
+       //删除行
+       mytable.deleteRow(1)
+     }
+    </script>
+</body>
+</html>

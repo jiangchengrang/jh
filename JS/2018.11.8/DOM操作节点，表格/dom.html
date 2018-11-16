@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom 节点方法</title>
+    <style>
+        .box{
+            /* px em rem*/
+            width: 200px;
+            height: 100px;
+            /* line-height: 100px; */
+            text-align: center;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+        createElement('div'):创建节点
+        appendChild(div):再...后面追加
+        */
+        //创建div节点
+        var div=document.createElement('div');
+        //div添加内容
+        div.innerHTML='我是动态创建的div';
+        //div设置属性
+        div.setAttribute('class','box');
+        //在body追加div
+        document.body.appendChild(div);
+        var ul=document.createElement('ul');
+        //在div追加ul
+        div.appendChild(ul);
+        var arr=['曹操','项羽','张飞'];
+        for(var i=0;i<3;i++){
+            var li=document.createElement('li');
+            li.innerHTML= arr[Math.floor(Math.random()*arr.length)]   
+            ul.appendChild(li)
+        }
+        //div,ul,3个li(曹操，项羽，张飞),点击li改变颜色
+    </script>
+</body>
+</html>

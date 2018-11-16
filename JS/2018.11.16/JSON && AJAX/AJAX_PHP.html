@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax 参数传递</title>
+</head>
+<body>
+    <input type="button" value="点击请求数据11111" id="btn">
+   <script>
+       var btn=document.getElementById('btn');
+       btn.onclick=function(){
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            //请求方式，请求url(后端接口，api),同步或者异步
+            //get方式传参
+            //xmlhttp.open("GET", "index.php?id=100 && name='lucy'", true);
+            //POST方法，string()类型向服务器发送请求
+            xmlhttp.open("POST", "index.php", true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            //post方式传参，string 类型
+            xmlhttp.send("id=88 && name='lily'");
+            //响应事件
+            xmlhttp.onreadystatechange = function () {
+                //响应状态
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    //获取数据，并将其转换成object
+                    var obj =xmlhttp.responseText;
+                    console.log(obj);
+                }
+            }   
+       }
+
+   </script> 
+</body>
+</html>

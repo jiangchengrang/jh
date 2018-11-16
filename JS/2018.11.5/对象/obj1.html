@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 基于对象编程</title>
+</head>
+<body>
+    <script>
+        var sunflower=new Object();
+        sunflower.position=0; //所在位置为地图的第一个单元格
+        sunflower.price=30;  //购买价格为30个阳光值
+        sunflower.health=100;//初始生命值为100
+        sunflower.injure=function(){
+             sunflower.health-=20;
+        }
+        sunflower.injure();
+        sunflower.injure();
+
+    </script>
+</body>
+</html>

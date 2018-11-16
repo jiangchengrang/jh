@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <img src="image/1.jpg" id="image" width="400px" height="400px">
+   <input type="button" value="走你" onclick="go()">
+   <script>
+       var i=1;
+       function go(){
+        i++;
+        document.getElementById('image').setAttribute('src','image/'+i+'.jpg');
+        //如果到最后一张回到第一个张
+        if(i==3){
+            i=0;
+        }
+       }
+       setInterval('go()',1000)
+   </script>
+</body>
+</html>
